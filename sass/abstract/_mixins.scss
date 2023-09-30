@@ -1,0 +1,13 @@
+@mixin clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  
+@mixin GlobalButtonOne{
+    font-size: 15px;
+    padding: 12px 24px;
+    border: 1px solid $colorPrimary;
+}
