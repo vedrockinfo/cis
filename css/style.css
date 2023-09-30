@@ -15,7 +15,102 @@
   
   1em = 16px
   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #CCE3DE; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333333; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase; }
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17.4px;
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  margin-bottom: 6rem; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transition: all 0.4s;
+  text-align: center;
+  color: transparent;
+  text-transform: uppercase; }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.mb-large {
+  margin-bottom: 7rem; }
+
+.mb-medium {
+  margin-top: 5rem; }
+
+.mb-small {
+  margin-bottom: 4rem; }
+
 .global-btn-one {
   font-size: 15px;
-  padding: 12px 24px;
-  border: 1px solid #3F676F; }
+  padding: 10px 24px;
+  line-height: 1;
+  text-transform: capitalize;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: 0.4s ease; }
+  .global-btn-one:hover {
+    color: #3F676F;
+    background: #ffffff; }
+
+.top-header {
+  background: #3F676F;
+  padding: 20px 0; }
+  .top-header .social-media {
+    color: #ffffff;
+    display: inline-flex; }
+    .top-header .social-media ul {
+      list-style: none; }
+      .top-header .social-media ul li {
+        display: inline-block; }
+        .top-header .social-media ul li a {
+          color: #ffffff; }

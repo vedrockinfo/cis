@@ -1,0 +1,17 @@
+.top-header{
+    background: $colorPrimary;
+    padding: 20px 0;
+    .social-media{
+        color: $colorWhite;
+        display: inline-flex;
+        ul{
+            list-style: none;
+            li{
+                display: inline-block;
+                a{
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+}
