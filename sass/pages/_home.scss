@@ -1,0 +1,62 @@
+.hero-section{
+    
+}
+.icon-area{
+    .icon-box-grid{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        @include respond(tab-land-before){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include respond(phone-before){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        gap: 2px;
+        .icon-box-items{
+            position: relative;
+            background: $colorPrimary;
+            transition: $transition;
+            min-height: 200px;
+            &:last-child{
+                @include respond(tab-land-before){
+                    grid-column: span 2;
+                }
+                @include respond(phone-before){
+                    grid-column: span 1;
+                }
+            }
+            &:hover{
+                background: $colorTertiary;
+                i{
+                    background: $colorPrimary;
+                    color: $colorWhite;
+                }
+            }
+            a{
+                color:$colorWhite;
+                padding: 30px 30px;
+    display: block;
+            }
+            .icons{
+                width: 70px;
+                margin-left: auto;
+                margin-right: auto;
+                img{
+                    filter: invert(1);
+                }
+            }
+            .content {
+                text-align: center;
+            }
+            i{
+                position: absolute;
+                top: 0;
+                right: 0;
+                color:$colorPrimary;
+                background: $colorTertiary;
+                padding: 10px;
+                border-radius: 20px 0 20px 20px;
+            }
+        }
+    }
+}
