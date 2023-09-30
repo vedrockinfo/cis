@@ -1,3 +1,17 @@
-h1{
-    font-size: 12px;
-}
+@import "./abstract/function";
+@import "./abstract/mixins";
+@import "./abstract/varaiables";
+
+@import "./base/animation";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+@import "./components/button";
+@import "./components/cards";
+
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/sidebar";
+
+@import "./pages/home";
