@@ -5,48 +5,18 @@ body {
     line-height: 1.7;
     color: $colorBlack;
   }
-  .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-  }
-  .heading-primary-main {
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-  }
-  .heading-primary-sub {
-    display: block;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 17.4px;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    margin-bottom: 6rem;
-  }
-  
-  .heading-secondary {
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    transition: all 0.4s;
+  h2.primary-heading {
+    line-height: 1.25em;
+    font-size: 36px;
     text-align: center;
-    color: transparent;
-    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.content-para p {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: normal;
+  &:last-child{
+    margin-bottom: 0;
   }
+}
   
-  .heading-tertiary {
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .paragraph {
-    font-size: 1.6rem;
-    &:not(:last-child) {
-      margin-bottom: 3rem;
-    }
-  }
