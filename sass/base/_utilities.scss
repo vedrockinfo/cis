@@ -10,4 +10,28 @@
       margin-bottom: 3rem;
     }
   }
-  
+    .mt-large {
+    margin-top: 7rem;
+    @include respond(tab-land-before){
+      margin-top: 5rem;
+    }
+    @include respond(tab-port-before){
+      margin-top: 3rem;
+    }
+  }
+  .primary-list{
+    li{
+      position: relative;
+      &:before{
+        content: "";
+        background-image: url("../images/primary-list-01.png");
+        background-size: cover;
+        position: absolute;
+        top: 30%;
+        left: -30px;
+        width: 20px;
+        height: 20px;
+        transform: translateY(-50%);
+      }
+    }
+  }

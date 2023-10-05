@@ -15,6 +15,8 @@
   
   1em = 16px
   */
+@import url("https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -33,24 +35,61 @@ ul {
   list-style: none; }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.7;
   color: #333333; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif !important; }
+
 h2.primary-heading {
   line-height: 1.25em;
-  font-size: 36px;
   text-align: center;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #3F676F; }
+  @media only screen and (max-width: 992px) {
+    h2.primary-heading {
+      margin-bottom: 40px;
+      font-size: 36px; } }
+  @media only screen and (max-width: 768px) {
+    h2.primary-heading {
+      margin-bottom: 30px;
+      font-size: 30px; } }
+  @media only screen and (max-width: 575px) {
+    h2.primary-heading {
+      margin-bottom: 30px;
+      font-size: 24px; } }
 
-.content-para p {
+.heading-fourth {
+  line-height: 1.25em;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #3F676F; }
+
+.content-para p, .content-para li {
   font-size: 18px;
   line-height: 32px;
   font-weight: normal; }
-  .content-para p:last-child {
+  .content-para p:last-child, .content-para li:last-child {
     margin-bottom: 0; }
+  @media only screen and (max-width: 992px) {
+    .content-para p, .content-para li {
+      font-size: 16px;
+      line-height: 1.7; } }
+  @media only screen and (max-width: 768px) {
+    .content-para p, .content-para li {
+      font-size: 15px;
+      line-height: 1.7; } }
 
 .u-center-text {
   text-align: center; }
@@ -64,17 +103,53 @@ h2.primary-heading {
     .mb-large {
       margin-bottom: 3rem; } }
 
+.mt-large {
+  margin-top: 7rem; }
+  @media only screen and (max-width: 992px) {
+    .mt-large {
+      margin-top: 5rem; } }
+  @media only screen and (max-width: 768px) {
+    .mt-large {
+      margin-top: 3rem; } }
+
+.primary-list li {
+  position: relative; }
+  .primary-list li:before {
+    content: "";
+    background-image: url("../images/primary-list-01.png");
+    background-size: cover;
+    position: absolute;
+    top: 30%;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%); }
+
 .global-btn-one {
   font-size: 15px;
   padding: 10px 24px;
   line-height: 1;
   text-transform: capitalize;
-  border: 1px solid #ffffff;
+  border: 1.9px solid #ffffff;
   color: #ffffff;
   transition: 0.4s ease; }
   .global-btn-one:hover {
     color: #3F676F;
     background: #ffffff; }
+
+.global-btn-two {
+  font-size: 15px;
+  padding: 10px 24px;
+  line-height: 1;
+  text-transform: capitalize;
+  border: 1.9px solid #3F676F;
+  background: #3F676F;
+  color: #ffffff;
+  transition: 0.4s ease;
+  display: inline-block; }
+  .global-btn-two:hover {
+    color: #3F676F;
+    background: transparent; }
 
 .top-header {
   background: #3F676F;
@@ -263,3 +338,101 @@ h2.primary-heading {
     width: 400px;
     margin-left: 40px;
     margin-bottom: 40px; } }
+
+.universal-tabs {
+  padding: 7rem 0;
+  background: #EAF4F4;
+  position: relative; }
+  .universal-tabs::before {
+    content: "";
+    background-image: url(../images/Background.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    mix-blend-mode: luminosity;
+    opacity: 0.3;
+    background-position: bottom; }
+  .universal-tabs .container {
+    position: relative; }
+  @media only screen and (max-width: 992px) {
+    .universal-tabs {
+      padding: 5rem 0; } }
+  @media only screen and (max-width: 768px) {
+    .universal-tabs {
+      padding: 3rem 0; } }
+  .universal-tabs ul.nav {
+    justify-content: space-between; }
+    .universal-tabs ul.nav li.nav-item {
+      width: 32%;
+      text-align: center; }
+      .universal-tabs ul.nav li.nav-item button {
+        width: 100%;
+        border: 2px solid #3F676F;
+        color: #3F676F;
+        text-transform: uppercase;
+        font-weight: 600; }
+        .universal-tabs ul.nav li.nav-item button.active {
+          background-color: #3F676F;
+          color: #ffffff;
+          position: relative; }
+          .universal-tabs ul.nav li.nav-item button.active::before {
+            content: "";
+            background: #3F676F;
+            height: 15px;
+            width: 15px;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%) rotate(45deg);
+            position: absolute; }
+  .universal-tabs .media-news {
+    padding-top: 5rem; }
+    .universal-tabs .media-news .content-para p {
+      margin-bottom: 3rem; }
+
+.about-section .row {
+  padding-top: 5rem; }
+  .about-section .row ul {
+    padding-left: 50px;
+    padding-right: 20px; }
+    .about-section .row ul li:not(:last-child) {
+      padding-bottom: 10px; }
+
+@media screen and (min-width: 1200px) {
+  .about-section .content-para.text-center {
+    padding: 0 130px; } }
+
+.acheivements .card {
+  margin-bottom: 3rem;
+  background: transparent;
+  border: 1px solid #3F676F;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.4s ease; }
+  .acheivements .card:hover {
+    background: #3F676F;
+    box-shadow: none; }
+    .acheivements .card:hover a, .acheivements .card:hover h4 {
+      color: #ffffff; }
+    .acheivements .card:hover img {
+      transform: scale(1.2);
+      filter: grayscale(1); }
+  .acheivements .card h4 {
+    transition: 0.4s ease; }
+  .acheivements .card a {
+    color: inherit;
+    transition: 0.4s ease; }
+    .acheivements .card a i {
+      display: block;
+      text-align: right;
+      padding-top: 20px;
+      font-size: 30px; }
+  .acheivements .card .achv-content {
+    padding: 30px 30px 20px 30px; }
+  .acheivements .card .achv-img {
+    overflow: hidden;
+    border-radius: 10px 10px 0 0; }
+    .acheivements .card .achv-img img {
+      transition: 0.4s ease; }

@@ -1,22 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.7;
     color: $colorBlack;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    font-family: 'Montserrat', sans-serif!important;
+  }
   h2.primary-heading {
     line-height: 1.25em;
-    font-size: 36px;
     text-align: center;
     margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+    color: $colorPrimary;
+    @include respond(tab-land-before){
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+    @include respond(tab-port-before){
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+    @include respond(phone-before){
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
 }
-.content-para p {
+
+.heading-fourth {
+    line-height: 1.25em;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: $colorPrimary;
+}
+.content-para p, .content-para li {
   font-size: 18px;
   line-height: 32px;
   font-weight: normal;
   &:last-child{
     margin-bottom: 0;
   }
+  @include respond(tab-land-before){
+      font-size: 16px;
+  line-height: 1.7;
+    }
+    @include respond(tab-port-before){
+      font-size: 15px;
+  line-height: 1.7;
+    }
 }
   
