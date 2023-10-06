@@ -51,6 +51,9 @@
     .brand {
         img{
             width: 175px;
+            @media screen and (min-width:800px) and (max-width:992px) {
+                width: 100px;
+            }
         }
     }
     .nav {
@@ -79,6 +82,11 @@
                         text-decoration: none;
                         background: transparent;
                         color: $colorPrimary;
+                            @media screen and (min-width:800px) and (max-width:992px) {
+                                padding: 0 9px;
+                                font-size: 16px;
+                                line-height: normal;
+                                        }
                         &:hover{
                             background: $colorPrimary;
                             color: $colorWhite;
@@ -99,8 +107,7 @@
     background: $colorPrimary;
     box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
         li a{
-            background: $colorTertiary;
-            color: $colorWhite;
+            color: $colorWhite!important;
         }
     }
 }

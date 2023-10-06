@@ -40,10 +40,21 @@ body {
 
 .heading-fourth {
     line-height: 1.25em;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     font-size: 24px;
     font-weight: 700;
     color: $colorPrimary;
+}
+.heading-five {
+    line-height: 1.25em;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid $colorPrimary;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: $colorPrimary;
+    text-transform: uppercase;
 }
 .content-para p, .content-para li {
   font-size: 18px;
