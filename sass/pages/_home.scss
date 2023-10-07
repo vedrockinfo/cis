@@ -1,10 +1,19 @@
 .hero-section{
+    position: relative;
+    min-height: calc(100vh - 170px);
+    display: grid;
+    @include respond (tab-port-after){
+        align-items: center;
+    }
+    @include respond (tab-port-before){
+        place-items: center;
+    }
     .bg-video {
     position: absolute;
     left: 0;
     width: 100%;
-    height: calc(100% - 140px);
-    top: 170px;
+    height: 100%;
+    top: 0;
     opacity: 1;
     z-index: -1;
     overflow: hidden;
@@ -57,6 +66,12 @@
             }
             .content {
                 text-align: center;
+                h6{
+                    font-size: 26px;
+                    font-weight: 700;
+                line-height: 1;
+    margin-top: 40px;
+                }
             }
             i{
                 position: absolute;
@@ -115,6 +130,11 @@
     }
     .container{
         position: relative;
+        .row.mt-large{
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     @include respond(tab-land-before){
       padding: 5rem 0;
@@ -180,6 +200,18 @@
     }
 }
 .acheivements{
+     .row.ach-exp{
+            width: fit-content;
+            margin-top: 4rem;
+            margin-left: auto;
+            margin-right: auto;
+            @include respond(tab-land-before){
+      margin-top: 2rem;
+    }
+    @include respond(tab-port-before){
+      margin-top: 1rem;
+    }
+        }
     .card{
         margin-bottom: 3rem;
         background: transparent;
@@ -231,6 +263,11 @@
     }
 }
 .latest-article-section{
+    .content-para.text-center {
+    @include respond (small-desktop-after){
+        padding: 0 130px;
+    }
+}
     .latest-card {
     margin-top: 5rem;
     &__image{
@@ -335,5 +372,23 @@
     }
                 }
             }
+    }
+}
+.awards-recognition{
+    .content-para.text-center {
+    @include respond (small-desktop-after){
+        padding: 0 130px;
+    }
+}
+    .awards-slider{
+        margin-top: 7rem;
+        .awards-img{
+            img{
+                height: 245px;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
     }
 }

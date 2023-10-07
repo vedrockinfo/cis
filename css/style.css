@@ -53,6 +53,7 @@ h2.primary-heading {
   line-height: 1.25em;
   text-align: center;
   margin-bottom: 40px;
+  text-transform: capitalize;
   font-size: 48px;
   font-weight: 700;
   color: #3F676F; }
@@ -136,6 +137,22 @@ h2.primary-heading {
     height: 20px;
     transform: translateY(-50%); }
 
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #CCE3DE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; }
+
+@media (max-width: 576px) {
+  #loader img {
+    width: 80px; } }
+
 .global-btn-one {
   font-size: 15px;
   padding: 10px 24px;
@@ -177,7 +194,7 @@ h2.primary-heading {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 55px 0; }
+      padding: 0; }
       .form-body .form-holder .form-content .form-items {
         background: rgba(51, 51, 51, 0.8);
         backdrop-filter: blur(7px);
@@ -443,19 +460,29 @@ footer {
   #navbar-toggle.active span:after {
     transform: rotate(-45deg); } }
 
-.hero-section .bg-video {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 140px);
-  top: 170px;
-  opacity: 1;
-  z-index: -1;
-  overflow: hidden; }
-  .hero-section .bg-video__content {
-    height: 100%;
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 170px);
+  display: grid; }
+  @media only screen and (min-width: 768.1px) {
+    .hero-section {
+      align-items: center; } }
+  @media only screen and (max-width: 768px) {
+    .hero-section {
+      place-items: center; } }
+  .hero-section .bg-video {
+    position: absolute;
+    left: 0;
     width: 100%;
-    object-fit: cover; }
+    height: 100%;
+    top: 0;
+    opacity: 1;
+    z-index: -1;
+    overflow: hidden; }
+    .hero-section .bg-video__content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
 
 .icon-area .icon-box-grid {
   display: grid;
@@ -492,6 +519,11 @@ footer {
         filter: invert(1) brightness(2); }
     .icon-area .icon-box-grid .icon-box-items .content {
       text-align: center; }
+      .icon-area .icon-box-grid .icon-box-items .content h6 {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1;
+        margin-top: 40px; }
     .icon-area .icon-box-grid .icon-box-items i {
       position: absolute;
       top: 0;
@@ -537,6 +569,10 @@ footer {
     background-position: bottom; }
   .universal-tabs .container {
     position: relative; }
+    .universal-tabs .container .row.mt-large {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto; }
   @media only screen and (max-width: 992px) {
     .universal-tabs {
       padding: 5rem 0; } }
@@ -584,6 +620,18 @@ footer {
   .about-section .content-para.text-center {
     padding: 0 130px; } }
 
+.acheivements .row.ach-exp {
+  width: fit-content;
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto; }
+  @media only screen and (max-width: 992px) {
+    .acheivements .row.ach-exp {
+      margin-top: 2rem; } }
+  @media only screen and (max-width: 768px) {
+    .acheivements .row.ach-exp {
+      margin-top: 1rem; } }
+
 .acheivements .card {
   margin-bottom: 3rem;
   background: transparent;
@@ -621,6 +669,14 @@ footer {
       object-fit: cover;
       object-position: left;
       min-height: 180px; }
+
+@media only screen and (max-width: 1200px) {
+  .latest-article-section .content-para.text-center {
+    padding: 0 130px; } }
+
+@media only screen and (min-width: 1200.1px) {
+  .latest-article-section .content-para.text-center {
+    padding: 0 130px; } }
 
 .latest-article-section .latest-card {
   margin-top: 5rem; }
@@ -708,3 +764,19 @@ footer {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
         .prospectus .prospectus-grid__content a img {
           width: 150px; }
+
+@media only screen and (max-width: 1200px) {
+  .awards-recognition .content-para.text-center {
+    padding: 0 130px; } }
+
+@media only screen and (min-width: 1200.1px) {
+  .awards-recognition .content-para.text-center {
+    padding: 0 130px; } }
+
+.awards-recognition .awards-slider {
+  margin-top: 7rem; }
+  .awards-recognition .awards-slider .awards-img img {
+    height: 245px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top; }
