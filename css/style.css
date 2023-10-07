@@ -70,6 +70,40 @@ h2.primary-heading {
       margin-bottom: 30px;
       font-size: 24px; } }
 
+.hero-primary-heading {
+  text-transform: uppercase;
+  font-size: 72px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.26; }
+  @media only screen and (max-width: 992px) {
+    .hero-primary-heading {
+      font-size: 48px; } }
+  @media only screen and (max-width: 768px) {
+    .hero-primary-heading {
+      font-size: 36px; } }
+  @media only screen and (max-width: 575px) {
+    .hero-primary-heading {
+      font-size: 30px; } }
+
+.hero-secondary-heading {
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 200;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.26; }
+  @media only screen and (max-width: 992px) {
+    .hero-secondary-heading {
+      font-size: 36px; } }
+  @media only screen and (max-width: 768px) {
+    .hero-secondary-heading {
+      font-size: 30px; } }
+  @media only screen and (max-width: 575px) {
+    .hero-secondary-heading {
+      font-size: 24px; } }
+
 .heading-fourth {
   line-height: 1.25em;
   margin-bottom: 0;
@@ -152,6 +186,26 @@ h2.primary-heading {
 @media (max-width: 576px) {
   #loader img {
     width: 80px; } }
+
+.inner-hero-section {
+  position: relative;
+  min-height: 500px;
+  display: grid;
+  place-content: center;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+  .inner-hero-section::before {
+    content: "";
+    background: #000;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .inner-hero-section .container {
+    position: relative; }
 
 .global-btn-one {
   font-size: 15px;
