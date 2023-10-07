@@ -54,24 +54,28 @@ $('.owl-carousel').owlCarousel({
 
 // Including Header Footer
 
-function loadContent(file, elementId) {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById(elementId).innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", file, true);
-  xhr.send();
-}
+// function loadContent(file, elementId) {
+//   var xhr = new XMLHttpRequest();
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState == 4 && xhr.status == 200) {
+//       document.getElementById(elementId).innerHTML = xhr.responseText;
+//     }
+//   };
+//   xhr.open("GET", file, true);
+//   xhr.send();
+// }
 
-// Load content from file1.html and file2.html
-loadContent("include/header.html", "header");
-loadContent("include/footer.html", "footer");
+// loadContent("include/header.html", "header");
+// loadContent("include/footer.html", "footer");
 
-loadContent("../include/campus-header.html", "campus-header");
-loadContent("../include/campus-footer.html", "campus-footer");
+// loadContent("../include/campus-header.html", "campus-header");
+// loadContent("../include/campus-footer.html", "campus-footer");
 
+
+jQuery(function () {
+  jQuery("#header").load("include/header.html");
+  jQuery("#footer").load("include/footer.html");
+});
 
 // Loader while loading
 
