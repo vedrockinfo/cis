@@ -69,6 +69,9 @@ function loadContent(file, elementId) {
 loadContent("include/header.html", "header");
 loadContent("include/footer.html", "footer");
 
+loadContent("../include/campus-header.html", "campus-header");
+loadContent("../include/campus-footer.html", "campus-footer");
+
 
 // Loader while loading
 
