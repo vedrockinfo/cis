@@ -7,7 +7,7 @@ jQuery(window).scroll(function () {
 });
 
 
-$('.owl-carousel').owlCarousel({
+jQuery('.owl-carousel').owlCarousel({
   loop: true,
   margin: 30,
   nav: false,
@@ -55,4 +55,16 @@ jQuery(function () {
 
 window.addEventListener('load', function () {
   document.getElementById('loader').style.display = 'none';
+});
+
+jQuery('.counter-count').each(function () {
+  jQuery(this).prop('Counter', 0).animate({
+    Counter: jQuery(this).text()
+  }, {
+    duration: 5000,
+    easing: 'swing',
+    step: function (now) {
+      jQuery(this).text(Math.ceil(now));
+    }
+  });
 });

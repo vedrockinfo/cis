@@ -53,7 +53,7 @@ h2.primary-heading {
   line-height: 1.25em;
   text-align: center;
   margin-bottom: 40px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 48px;
   font-weight: 700;
   color: #3F676F; }
@@ -109,6 +109,13 @@ h2.primary-heading {
   margin-bottom: 0;
   font-size: 24px;
   font-weight: 700;
+  color: #3F676F; }
+
+.heading-fac {
+  line-height: 1.25em;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 500;
   color: #3F676F; }
 
 .heading-five {
@@ -207,6 +214,41 @@ h2.primary-heading {
   .inner-hero-section .container {
     position: relative; }
 
+.inner-hero-section-two {
+  position: relative;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+  .inner-hero-section-two::before {
+    content: "";
+    background: #0a6eb2;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .inner-hero-section-two .container {
+    position: relative; }
+
+.border-img-one {
+  position: relative;
+  display: block;
+  margin: 10px 0; }
+  .border-img-one span {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+    .border-img-one span:nth-child(1) {
+      background: rgba(255, 255, 255, 0.2);
+      width: 70%;
+      height: 2px; }
+    .border-img-one span:nth-child(2) {
+      background: rgba(255, 255, 255, 0.2);
+      margin-top: 3px;
+      width: 50%;
+      height: 2px; }
+
 .global-btn-one {
   font-size: 15px;
   padding: 10px 24px;
@@ -224,7 +266,7 @@ h2.primary-heading {
   padding: 10px 24px;
   line-height: 1;
   text-transform: capitalize;
-  border: 1.9px solid #3F676F;
+  border: 1.9px solid #3F676F !important;
   background: #3F676F;
   color: #ffffff;
   transition: 0.4s ease;
@@ -333,6 +375,99 @@ h2.primary-heading {
       .form-body .gender .btn:hover {
         background: #ffffff;
         color: #333333; }
+
+.admission-process-form {
+  display: grid;
+  justify-content: flex-end; }
+  .admission-process-form .form-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .admission-process-form .form-holder form small {
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 300; }
+    .admission-process-form .form-holder form .form-check {
+      margin-top: 14px; }
+    .admission-process-form .form-holder .form-content {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0; }
+      .admission-process-form .form-holder .form-content .form-items {
+        background: #0a6eb2;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 25px;
+        display: inline-block;
+        width: 100%;
+        min-width: 420px;
+        border-radius: 10px;
+        text-align: left;
+        transition: all 0.4s ease; }
+        @media only screen and (max-width: 575px) {
+          .admission-process-form .form-holder .form-content .form-items {
+            min-width: 80%; } }
+      .admission-process-form .form-holder .form-content h3 {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 5px; }
+      .admission-process-form .form-holder .form-content h4 {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 5px; }
+      .admission-process-form .form-holder .form-content h3.form-title {
+        margin-bottom: 30px; }
+      .admission-process-form .form-holder .form-content p {
+        color: #ffffff;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 20px;
+        margin-bottom: 30px; }
+      .admission-process-form .form-holder .form-content label, .admission-process-form .form-holder .form-content .was-validated .form-check-input:invalid ~ .form-check-label, .admission-process-form .form-holder .form-content .was-validated .form-check-input:valid ~ .form-check-label {
+        color: #ffffff;
+        font-size: 1.6rem; }
+      .admission-process-form .form-holder .form-content input[type=text], .admission-process-form .form-holder .form-content input[type=password] {
+        width: 100%;
+        padding: 9px 20px;
+        text-align: left;
+        border: 0;
+        outline: 0;
+        border-radius: 6px;
+        background-color: #ffffff;
+        font-size: 15px;
+        font-weight: 300;
+        color: #8D8D8D;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        margin-top: 16px; }
+      .admission-process-form .form-holder .form-content button {
+        background: transparent; }
+      .admission-process-form .form-holder .form-content .other-signup-option {
+        color: white; }
+        .admission-process-form .form-holder .form-content .other-signup-option .forget {
+          margin: 40px 0 10px 0; }
+        .admission-process-form .form-holder .form-content .other-signup-option .row {
+          text-align: center; }
+        .admission-process-form .form-holder .form-content .other-signup-option a {
+          color: white;
+          font-weight: 300;
+          font-size: 14px;
+          border-bottom: 1px solid; }
+    .admission-process-form .form-holder .mv-up {
+      margin-top: -9px !important;
+      margin-bottom: 8px !important; }
+    .admission-process-form .form-holder .invalid-feedback {
+      color: #ff606e; }
+    .admission-process-form .form-holder .valid-feedback {
+      color: #2acc80; }
 
 footer {
   background: #545775;
@@ -513,6 +648,148 @@ footer {
     transform: rotate(45deg); }
   #navbar-toggle.active span:after {
     transform: rotate(-45deg); } }
+
+.cis-touch .cis-touch-grid {
+  display: flex;
+  justify-content: space-around; }
+  @media only screen and (max-width: 768px) {
+    .cis-touch .cis-touch-grid {
+      flex-direction: column;
+      gap: 30px; } }
+  .cis-touch .cis-touch-grid__item {
+    background: #3F676F;
+    border-radius: 10px;
+    flex: 0 0 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px); }
+    .cis-touch .cis-touch-grid__item a {
+      color: #ffffff;
+      display: grid;
+      place-content: center;
+      min-width: 100%;
+      text-align: center;
+      min-height: 160px;
+      font-size: 24px; }
+      @media only screen and (max-width: 575px) {
+        .cis-touch .cis-touch-grid__item a {
+          font-size: 18px; } }
+      .cis-touch .cis-touch-grid__item a i {
+        font-size: 40px;
+        padding-bottom: 10px; }
+        @media only screen and (max-width: 575px) {
+          .cis-touch .cis-touch-grid__item a i {
+            font-size: 30px; } }
+
+section.courses-coverd .course-img img {
+  mix-blend-mode: darken; }
+
+section.courses-coverd .accordion {
+  margin-top: 5rem; }
+  section.courses-coverd .accordion .accordion-item {
+    border-radius: 10px !important;
+    margin-bottom: 15px;
+    background-color: transparent !important;
+    color: #3F676F;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; }
+  section.courses-coverd .accordion .accordion-body {
+    border: 2px solid #3F676F;
+    border-top: 0;
+    padding: 30px;
+    border-radius: 0 0 10px 10px; }
+  section.courses-coverd .accordion button.accordion-button {
+    background: #3F676F;
+    color: #ffffff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0 !important; }
+    section.courses-coverd .accordion button.accordion-button:focus {
+      outline: none;
+      border: none;
+      box-shadow: none; }
+    section.courses-coverd .accordion button.accordion-button::after {
+      filter: invert(2) brightness(2); }
+
+.admission-counter {
+  padding: 10rem 0;
+  background-image: url("https://disruptiveliteracy.com/wp-content/uploads/2023/06/hero-03.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .admission-counter .counter p.counter-count {
+    text-align: center;
+    color: #ffffff; }
+    .admission-counter .counter p.counter-count + p {
+      color: #ffffff;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 500; }
+  .admission-counter .counter p.counter-count {
+    font-weight: 800;
+    font-size: 60px; }
+
+.top-facilities .top-facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 100px; }
+  @media only screen and (max-width: 768px) {
+    .top-facilities .top-facilities-grid {
+      grid-template-columns: repeat(1, 1fr); } }
+  .top-facilities .top-facilities-grid__items {
+    cursor: pointer; }
+    .top-facilities .top-facilities-grid__items .facility {
+      border-left: 5px solid #3F676F;
+      padding: 15px 30px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      border-top: 1px solid rgba(63, 103, 111, 0.2);
+      border-bottom: 1px solid rgba(63, 103, 111, 0.2);
+      border-right: 1px solid rgba(63, 103, 111, 0.2);
+      border-radius: 0 5px 5px 0;
+      transition: 0.4s ease; }
+      .top-facilities .top-facilities-grid__items .facility:hover {
+        background: #ffffff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; }
+
+.forgetten-password .form-group.text-center {
+  margin-top: 19px; }
+
+.forgetten-password .forgetten {
+  padding: 30px;
+  background: #ffffff; }
+
+.forgetten-password i {
+  color: #3F676F;
+  margin-bottom: 20px; }
+
+.forgetten-password input[type="email"] {
+  width: 100%;
+  padding: 9px 20px;
+  text-align: left;
+  outline: 0;
+  border-radius: 6px;
+  background-color: #F6FFF8;
+  font-size: 15px;
+  font-weight: 300;
+  color: #3F676F;
+  transition: 0.4s ease;
+  margin-top: 16px;
+  border: 1px solid #3F676F;
+  text-transform: capitalize; }
+
+@media only screen and (max-width: 768px) {
+  .forgetten-password .container .col-md-6 img {
+    display: none; } }
+
+@media only screen and (min-width: 768.1px) {
+  .forgetten-password .container {
+    width: 780px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background: #ffffff; }
+    .forgetten-password .container .col-md-6 {
+      padding: 0; } }
 
 .hero-section {
   position: relative;
