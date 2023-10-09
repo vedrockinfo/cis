@@ -120,10 +120,6 @@
     .nav-mobile {
         display: block;
    }
-    nav {
-        width: 100%;
-        padding: 55px 0 15px;
-   }
     nav ul {
         display: none;
    }
@@ -149,7 +145,7 @@
 }
 #navbar-toggle {
     cursor: pointer;
-    padding: 10px 35px 16px 0px;
+    display: block;
 }
 #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
     cursor: pointer;

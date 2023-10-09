@@ -63,6 +63,7 @@ body {
     color: $colorWhite;
     text-align: center;
     line-height: 1.26;
+    display: block;
     @include respond(tab-land-before){
       font-size: 36px;
     }

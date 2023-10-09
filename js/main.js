@@ -68,3 +68,16 @@ jQuery('.counter-count').each(function () {
     }
   });
 });
+
+
+function openTab(evt, tabName) {
+  $('.tabcontent').hide();
+
+  $('.tablinks').removeClass('active');
+
+  $('#' + tabName).show();
+
+  $(evt.target).addClass('active');
+}
+
+openTab(event, 'tab1');

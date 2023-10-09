@@ -1,0 +1,49 @@
+
+.faqs-vertical-tab{
+    .vertical-tabs {
+  display: flex;
+  flex-direction: column;
+  .tab{
+    width: 90%;
+    cursor: pointer;
+    margin-right: 10px;
+    @include respond (tab-port-before){
+        width: 100%;
+    }
+    button.tablinks {
+    border: none;
+    cursor: pointer;
+    background: $colorTertiary;
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    border-bottom: 1px solid $colorPrimary;
+    transition: $transition;
+    &.active{
+        background: $colorPrimary;
+        color: $colorWhite;
+    }
+    &:hover{
+        background: $colorPrimary;
+        color: $colorWhite;
+    }
+}
+&:last-child button.tablinks{
+    border-bottom: none;
+}
+  }
+  .tabcontent {
+  display: none;
+  @include respond (tab-port-before){
+        margin-top: 4rem;
+    }
+  .heading-fac{
+    margin-bottom: 2.4rem;
+    font-weight: 700;
+    &:not(:first-child){
+        margin-top: 5rem;
+    }
+  }
+}
+}
+}

@@ -93,7 +93,8 @@ h2.primary-heading {
   font-weight: 200;
   color: #ffffff;
   text-align: center;
-  line-height: 1.26; }
+  line-height: 1.26;
+  display: block; }
   @media only screen and (max-width: 992px) {
     .hero-secondary-heading {
       font-size: 36px; } }
@@ -601,9 +602,6 @@ footer {
 @media only screen and (max-width: 800px) {
   .nav-mobile {
     display: block; }
-  nav {
-    width: 100%;
-    padding: 55px 0 15px; }
   nav ul {
     display: none; }
   nav ul li {
@@ -625,7 +623,7 @@ footer {
 @media only screen and (max-width: 800px) {
   #navbar-toggle {
     cursor: pointer;
-    padding: 10px 35px 16px 0px; }
+    display: block; }
   #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
     cursor: pointer;
     border-radius: 1px;
@@ -752,6 +750,44 @@ section.courses-coverd .accordion {
       .top-facilities .top-facilities-grid__items .facility:hover {
         background: #ffffff;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; }
+
+.faqs-vertical-tab .vertical-tabs {
+  display: flex;
+  flex-direction: column; }
+  .faqs-vertical-tab .vertical-tabs .tab {
+    width: 90%;
+    cursor: pointer;
+    margin-right: 10px; }
+    @media only screen and (max-width: 768px) {
+      .faqs-vertical-tab .vertical-tabs .tab {
+        width: 100%; } }
+    .faqs-vertical-tab .vertical-tabs .tab button.tablinks {
+      border: none;
+      cursor: pointer;
+      background: #CCE3DE;
+      width: 100%;
+      text-align: left;
+      padding: 12px 20px;
+      border-bottom: 1px solid #3F676F;
+      transition: 0.4s ease; }
+      .faqs-vertical-tab .vertical-tabs .tab button.tablinks.active {
+        background: #3F676F;
+        color: #ffffff; }
+      .faqs-vertical-tab .vertical-tabs .tab button.tablinks:hover {
+        background: #3F676F;
+        color: #ffffff; }
+    .faqs-vertical-tab .vertical-tabs .tab:last-child button.tablinks {
+      border-bottom: none; }
+  .faqs-vertical-tab .vertical-tabs .tabcontent {
+    display: none; }
+    @media only screen and (max-width: 768px) {
+      .faqs-vertical-tab .vertical-tabs .tabcontent {
+        margin-top: 4rem; } }
+    .faqs-vertical-tab .vertical-tabs .tabcontent .heading-fac {
+      margin-bottom: 2.4rem;
+      font-weight: 700; }
+      .faqs-vertical-tab .vertical-tabs .tabcontent .heading-fac:not(:first-child) {
+        margin-top: 5rem; }
 
 .forgetten-password .form-group.text-center {
   margin-top: 19px; }
