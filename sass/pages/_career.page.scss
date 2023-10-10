@@ -1,0 +1,95 @@
+.career-area{
+    .careers-card{
+        background: $colorPrimary;
+        border-radius: 10px;
+        padding: 10rem 4rem 4rem 4rem;
+        position: relative;
+        h4.heading-fourth {
+            position: absolute;
+            top: 4rem;
+            background:$colorWhite;
+            left: -10px;
+            padding: 1rem 2rem 1rem 4rem;
+            &::before{
+                background-color: $colorBlack;
+    position: absolute;
+    left: 3.5px;
+    bottom: -10px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    z-index: -1;
+    content: "";
+            }
+        }
+        ul{
+            display: flex;
+            gap:10px;
+            margin-top: 3rem;
+            li{
+                a{
+                    color: $colorWhite;
+                    border: 1px solid $colorWhite;
+                    width: 4rem;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    display: grid;
+                    place-content: center;
+                    transition: $transition;
+                    &:hover{
+                        background: $colorWhite;
+                        color: $colorPrimary;
+                    }
+                }
+            }
+        }
+    }
+}
+.reinforcing-habits{
+    .vertical-tabs {
+  display: flex;
+  flex-direction: column;
+  .tab{
+    width: 90%;
+    cursor: pointer;
+    margin-right: 10px;
+    @include respond (tab-port-before){
+        width: 100%;
+    }
+    button.tablinks {
+    border: none;
+    cursor: pointer;
+    background: $colorTertiary;
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    border-bottom: 1px solid $colorPrimary;
+    transition: $transition;
+    &.active{
+        background: $colorPrimary;
+        color: $colorWhite;
+    }
+    &:hover{
+        background: $colorPrimary;
+        color: $colorWhite;
+    }
+}
+&:last-child button.tablinks{
+    border-bottom: none;
+}
+  }
+  .tabcontent {
+  display: none;
+  @include respond (tab-port-before){
+        margin-top: 4rem;
+    }
+  .heading-fac{
+    margin-bottom: 2.4rem;
+    font-weight: 700;
+    &:not(:first-child){
+        margin-top: 5rem;
+    }
+  }
+}
+}
+}

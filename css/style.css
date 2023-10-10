@@ -663,6 +663,106 @@ h2.primary-heading {
     background-color: transparent;
     color: #3F676F; }
 
+@media only screen and (max-width: 768px) {
+  .career-form-area {
+    margin-top: 3rem; } }
+
+.career-form-area .form-items {
+  padding: 25px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  text-align: left;
+  transition: all 0.4s ease; }
+  @media only screen and (max-width: 575px) {
+    .career-form-area .form-items {
+      min-width: 80%; } }
+
+.career-form-area h3 {
+  color: #3F676F;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px; }
+  @media only screen and (max-width: 575px) {
+    .career-form-area h3 {
+      font-size: 18px; } }
+
+.career-form-area h3.form-title {
+  margin-bottom: 30px; }
+
+.career-form-area p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 30px; }
+
+.career-form-area label, .career-form-area .was-validated .form-check-input:invalid ~ .form-check-label, .career-form-area .was-validated .form-check-input:valid ~ .form-check-label {
+  color: #ffffff;
+  font-size: 1.6rem; }
+
+.career-form-area input[type=file] {
+  display: none; }
+  .career-form-area input[type=file] + label {
+    background: #3F676F;
+    padding: 1.5rem;
+    border-radius: 4rem;
+    width: 250px;
+    text-align: center;
+    margin-top: 3rem;
+    cursor: pointer; }
+    @media only screen and (max-width: 575px) {
+      .career-form-area input[type=file] + label {
+        padding: 0.6rem 1.5rem;
+        font-size: 1.4rem;
+        width: auto; } }
+
+.career-form-area input[type=text], .career-form-area input[type=password], .career-form-area input[type=email], .career-form-area input[type=date], .career-form-area select {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #3F676F;
+  display: block;
+  width: 100%;
+  transition: all 0.3s;
+  margin-top: 16px;
+  color: rgba(63, 103, 111, 0.8); }
+  @media only screen and (max-width: 575px) {
+    .career-form-area input[type=text], .career-form-area input[type=password], .career-form-area input[type=email], .career-form-area input[type=date], .career-form-area select {
+      padding: 0.5rem 1rem; } }
+  .career-form-area input[type=text]::placeholder, .career-form-area input[type=password]::placeholder, .career-form-area input[type=email]::placeholder, .career-form-area input[type=date]::placeholder, .career-form-area select::placeholder {
+    color: rgba(63, 103, 111, 0.8); }
+  .career-form-area input[type=text]:focus, .career-form-area input[type=password]:focus, .career-form-area input[type=email]:focus, .career-form-area input[type=date]:focus, .career-form-area select:focus {
+    box-shadow: none !important; }
+
+.career-form-area textarea {
+  position: static !important;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #3F676F;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(63, 103, 111, 0.8);
+  outline: none;
+  resize: none;
+  height: 120px;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 14px;
+  margin-top: 16px; }
+  .career-form-area textarea:hover, .career-form-area textarea:focus {
+    background-color: transparent;
+    color: #3F676F; }
+
 footer {
   background: #545775;
   padding: 7rem 0; }
@@ -1060,6 +1160,82 @@ section.courses-coverd .accordion {
       gap: 10px; }
       .alumni-glimpse .glimpse-card .sliding-text ul li a {
         color: #ffffff; }
+
+.career-area .careers-card {
+  background: #3F676F;
+  border-radius: 10px;
+  padding: 10rem 4rem 4rem 4rem;
+  position: relative; }
+  .career-area .careers-card h4.heading-fourth {
+    position: absolute;
+    top: 4rem;
+    background: #ffffff;
+    left: -10px;
+    padding: 1rem 2rem 1rem 4rem; }
+    .career-area .careers-card h4.heading-fourth::before {
+      background-color: #333333;
+      position: absolute;
+      left: 3.5px;
+      bottom: -10px;
+      width: 20px;
+      height: 20px;
+      transform: rotate(45deg);
+      z-index: -1;
+      content: ""; }
+  .career-area .careers-card ul {
+    display: flex;
+    gap: 10px;
+    margin-top: 3rem; }
+    .career-area .careers-card ul li a {
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      width: 4rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+      transition: 0.4s ease; }
+      .career-area .careers-card ul li a:hover {
+        background: #ffffff;
+        color: #3F676F; }
+
+.reinforcing-habits .vertical-tabs {
+  display: flex;
+  flex-direction: column; }
+  .reinforcing-habits .vertical-tabs .tab {
+    width: 90%;
+    cursor: pointer;
+    margin-right: 10px; }
+    @media only screen and (max-width: 768px) {
+      .reinforcing-habits .vertical-tabs .tab {
+        width: 100%; } }
+    .reinforcing-habits .vertical-tabs .tab button.tablinks {
+      border: none;
+      cursor: pointer;
+      background: #CCE3DE;
+      width: 100%;
+      text-align: left;
+      padding: 12px 20px;
+      border-bottom: 1px solid #3F676F;
+      transition: 0.4s ease; }
+      .reinforcing-habits .vertical-tabs .tab button.tablinks.active {
+        background: #3F676F;
+        color: #ffffff; }
+      .reinforcing-habits .vertical-tabs .tab button.tablinks:hover {
+        background: #3F676F;
+        color: #ffffff; }
+    .reinforcing-habits .vertical-tabs .tab:last-child button.tablinks {
+      border-bottom: none; }
+  .reinforcing-habits .vertical-tabs .tabcontent {
+    display: none; }
+    @media only screen and (max-width: 768px) {
+      .reinforcing-habits .vertical-tabs .tabcontent {
+        margin-top: 4rem; } }
+    .reinforcing-habits .vertical-tabs .tabcontent .heading-fac {
+      margin-bottom: 2.4rem;
+      font-weight: 700; }
+      .reinforcing-habits .vertical-tabs .tabcontent .heading-fac:not(:first-child) {
+        margin-top: 5rem; }
 
 main.contact-page + div#footer footer {
   margin-top: 0; }
