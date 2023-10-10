@@ -577,6 +577,92 @@ h2.primary-heading {
 .alumni-form-area button {
   background: transparent; }
 
+@media only screen and (max-width: 768px) {
+  .contact-form-area {
+    margin-top: 3rem; } }
+
+.contact-form-area .form-items {
+  border: 1px solid #3F676F;
+  border-radius: 10px;
+  padding: 25px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  text-align: left;
+  transition: all 0.4s ease; }
+  @media only screen and (max-width: 575px) {
+    .contact-form-area .form-items {
+      min-width: 80%; } }
+
+.contact-form-area h3 {
+  color: #3F676F;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px; }
+  @media only screen and (max-width: 575px) {
+    .contact-form-area h3 {
+      font-size: 18px; } }
+
+.contact-form-area h3.form-title {
+  margin-bottom: 30px; }
+
+.contact-form-area p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 30px; }
+
+.contact-form-area label, .contact-form-area .was-validated .form-check-input:invalid ~ .form-check-label, .contact-form-area .was-validated .form-check-input:valid ~ .form-check-label {
+  color: #ffffff;
+  font-size: 1.6rem; }
+
+.contact-form-area input[type=text], .contact-form-area input[type=password], .contact-form-area input[type=email], .contact-form-area input[type=date], .contact-form-area select {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #3F676F;
+  display: block;
+  width: 100%;
+  transition: all 0.3s;
+  margin-top: 16px;
+  color: rgba(63, 103, 111, 0.8); }
+  @media only screen and (max-width: 575px) {
+    .contact-form-area input[type=text], .contact-form-area input[type=password], .contact-form-area input[type=email], .contact-form-area input[type=date], .contact-form-area select {
+      padding: 0.5rem 1rem; } }
+  .contact-form-area input[type=text]::placeholder, .contact-form-area input[type=password]::placeholder, .contact-form-area input[type=email]::placeholder, .contact-form-area input[type=date]::placeholder, .contact-form-area select::placeholder {
+    color: rgba(63, 103, 111, 0.8); }
+  .contact-form-area input[type=text]:focus, .contact-form-area input[type=password]:focus, .contact-form-area input[type=email]:focus, .contact-form-area input[type=date]:focus, .contact-form-area select:focus {
+    box-shadow: none !important; }
+
+.contact-form-area textarea {
+  position: static !important;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #3F676F;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(63, 103, 111, 0.8);
+  outline: none;
+  resize: none;
+  height: 120px;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 14px;
+  margin-top: 16px; }
+  .contact-form-area textarea:hover, .contact-form-area textarea:focus {
+    background-color: transparent;
+    color: #3F676F; }
+
 footer {
   background: #545775;
   padding: 7rem 0; }
@@ -628,6 +714,12 @@ footer {
   .top-header .social-media {
     color: #ffffff;
     display: inline-flex; }
+    @media only screen and (max-width: 768px) {
+      .top-header .social-media {
+        width: 100%;
+        justify-content: center; } }
+    .top-header .social-media span {
+      text-transform: capitalize; }
     .top-header .social-media ul {
       margin-bottom: 0; }
       .top-header .social-media ul li {
@@ -639,6 +731,10 @@ footer {
           color: #ffffff; }
           .top-header .social-media ul li a i {
             font-size: 20px; }
+  @media only screen and (max-width: 768px) {
+    .top-header .top-navigation {
+      width: 100%;
+      text-align: center; } }
   .top-header .top-navigation ul {
     margin-bottom: 0;
     padding-left: 0; }
@@ -965,6 +1061,45 @@ section.courses-coverd .accordion {
       .alumni-glimpse .glimpse-card .sliding-text ul li a {
         color: #ffffff; }
 
+main.contact-page + div#footer footer {
+  margin-top: 0; }
+
+main.contact-page .content-para {
+  margin-bottom: 5rem; }
+  @media only screen and (min-width: 1200.1px) {
+    main.contact-page .content-para {
+      padding: 0 130px; } }
+  @media only screen and (max-width: 768px) {
+    main.contact-page .content-para {
+      margin-bottom: 3rem; } }
+
+main.contact-page .contact-list {
+  display: grid;
+  gap: 4rem; }
+  @media only screen and (max-width: 768px) {
+    main.contact-page .contact-list {
+      gap: 3rem; } }
+  main.contact-page .contact-list .contact-list-items {
+    background: #3F676F;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 3rem;
+    border-radius: 2rem;
+    color: #ffffff;
+    text-align: center; }
+    @media only screen and (min-width: 1200.1px) {
+      main.contact-page .contact-list .contact-list-items {
+        width: 440px; } }
+    main.contact-page .contact-list .contact-list-items a, main.contact-page .contact-list .contact-list-items p {
+      color: #ffffff;
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: 0.5px; }
+    main.contact-page .contact-list .contact-list-items .c-icon {
+      padding-bottom: 2rem; }
+      main.contact-page .contact-list .contact-list-items .c-icon img {
+        width: 60px;
+        margin: auto; }
+
 .faqs-vertical-tab .vertical-tabs {
   display: flex;
   flex-direction: column; }
@@ -1251,10 +1386,6 @@ section.courses-coverd .accordion {
       object-position: left;
       min-height: 180px; }
 
-@media only screen and (max-width: 1200px) {
-  .latest-article-section .content-para.text-center {
-    padding: 0 130px; } }
-
 @media only screen and (min-width: 1200.1px) {
   .latest-article-section .content-para.text-center {
     padding: 0 130px; } }
@@ -1345,10 +1476,6 @@ section.courses-coverd .accordion {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
         .prospectus .prospectus-grid__content a img {
           width: 150px; }
-
-@media only screen and (max-width: 1200px) {
-  .awards-recognition .content-para.text-center {
-    padding: 0 130px; } }
 
 @media only screen and (min-width: 1200.1px) {
   .awards-recognition .content-para.text-center {
