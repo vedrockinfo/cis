@@ -55,6 +55,9 @@
 .inner-hero-section {
     position: relative;
     min-height: 500px;
+    @include respond (phone-before){
+        min-height: 250px;
+    }
     display: grid;
     place-content: center;
     background-size: cover;

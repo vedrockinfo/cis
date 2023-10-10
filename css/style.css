@@ -203,6 +203,9 @@ h2.primary-heading {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat; }
+  @media only screen and (max-width: 575px) {
+    .inner-hero-section {
+      min-height: 250px; } }
   .inner-hero-section::before {
     content: "";
     background: #000;
@@ -276,23 +279,23 @@ h2.primary-heading {
     color: #3F676F;
     background: transparent; }
 
-.form-body {
+.hero-form-area .form-body {
   display: grid;
   justify-content: flex-end; }
-  .form-body .form-holder {
+  .hero-form-area .form-body .form-holder {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center; }
-    .form-body .form-holder .form-content {
+    .hero-form-area .form-body .form-holder .form-content {
       position: relative;
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 0; }
-      .form-body .form-holder .form-content .form-items {
+      .hero-form-area .form-body .form-holder .form-content .form-items {
         background: rgba(51, 51, 51, 0.8);
         backdrop-filter: blur(7px);
         padding: 25px;
@@ -303,27 +306,27 @@ h2.primary-heading {
         text-align: left;
         transition: all 0.4s ease; }
         @media only screen and (max-width: 575px) {
-          .form-body .form-holder .form-content .form-items {
+          .hero-form-area .form-body .form-holder .form-content .form-items {
             min-width: 80%; } }
-      .form-body .form-holder .form-content h3 {
+      .hero-form-area .form-body .form-holder .form-content h3 {
         color: #ffffff;
         text-align: left;
         font-size: 28px;
         font-weight: 600;
         margin-bottom: 5px; }
-      .form-body .form-holder .form-content h3.form-title {
+      .hero-form-area .form-body .form-holder .form-content h3.form-title {
         margin-bottom: 30px; }
-      .form-body .form-holder .form-content p {
+      .hero-form-area .form-body .form-holder .form-content p {
         color: #ffffff;
         text-align: left;
         font-size: 17px;
         font-weight: 300;
         line-height: 20px;
         margin-bottom: 30px; }
-      .form-body .form-holder .form-content label, .form-body .form-holder .form-content .was-validated .form-check-input:invalid ~ .form-check-label, .form-body .form-holder .form-content .was-validated .form-check-input:valid ~ .form-check-label {
+      .hero-form-area .form-body .form-holder .form-content label, .hero-form-area .form-body .form-holder .form-content .was-validated .form-check-input:invalid ~ .form-check-label, .hero-form-area .form-body .form-holder .form-content .was-validated .form-check-input:valid ~ .form-check-label {
         color: #ffffff;
         font-size: 1.6rem; }
-      .form-body .form-holder .form-content input[type=text], .form-body .form-holder .form-content input[type=password], .form-body .form-holder .form-content input[type=email], .form-body .form-holder .form-content select {
+      .hero-form-area .form-body .form-holder .form-content input[type=text], .hero-form-area .form-body .form-holder .form-content input[type=password], .hero-form-area .form-body .form-holder .form-content input[type=email], .hero-form-area .form-body .form-holder .form-content select {
         width: 100%;
         padding: 9px 20px;
         text-align: left;
@@ -337,7 +340,7 @@ h2.primary-heading {
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
         margin-top: 16px; }
-      .form-body .form-holder .form-content textarea {
+      .hero-form-area .form-body .form-holder .form-content textarea {
         position: static !important;
         width: 100%;
         padding: 8px 20px;
@@ -355,25 +358,25 @@ h2.primary-heading {
         transition: none;
         margin-bottom: 14px;
         margin-top: 16px; }
-        .form-body .form-holder .form-content textarea:hover, .form-body .form-holder .form-content textarea:focus {
+        .hero-form-area .form-body .form-holder .form-content textarea:hover, .hero-form-area .form-body .form-holder .form-content textarea:focus {
           border: 0;
           background-color: #ebeff8;
           color: #8D8D8D; }
-      .form-body .form-holder .form-content button {
+      .hero-form-area .form-body .form-holder .form-content button {
         background: transparent; }
-    .form-body .form-holder .mv-up {
+    .hero-form-area .form-body .form-holder .mv-up {
       margin-top: -9px !important;
       margin-bottom: 8px !important; }
-    .form-body .form-holder .invalid-feedback {
+    .hero-form-area .form-body .form-holder .invalid-feedback {
       color: #ff606e; }
-    .form-body .form-holder .valid-feedback {
+    .hero-form-area .form-body .form-holder .valid-feedback {
       color: #2acc80; }
-  .form-body .gender {
+  .hero-form-area .form-body .gender {
     margin: 2rem 0 1rem 0; }
-    .form-body .gender .btn {
+    .hero-form-area .form-body .gender .btn {
       border: 1px solid #ffffff;
       transition: 0.4s ease; }
-      .form-body .gender .btn:hover {
+      .hero-form-area .form-body .gender .btn:hover {
         background: #ffffff;
         color: #333333; }
 
@@ -470,6 +473,110 @@ h2.primary-heading {
     .admission-process-form .form-holder .valid-feedback {
       color: #2acc80; }
 
+@media only screen and (max-width: 768px) {
+  .alumni-form-area {
+    margin-top: 3rem; } }
+
+.alumni-form-area .form-items {
+  background: #3f676f;
+  backdrop-filter: blur(7px);
+  padding: 25px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  text-align: left;
+  transition: all 0.4s ease; }
+  @media only screen and (max-width: 575px) {
+    .alumni-form-area .form-items {
+      min-width: 80%; } }
+
+.alumni-form-area h3 {
+  color: #ffffff;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px; }
+  @media only screen and (max-width: 575px) {
+    .alumni-form-area h3 {
+      font-size: 18px; } }
+
+.alumni-form-area h3.form-title {
+  margin-bottom: 30px; }
+
+.alumni-form-area p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 30px; }
+
+.alumni-form-area label, .alumni-form-area .was-validated .form-check-input:invalid ~ .form-check-label, .alumni-form-area .was-validated .form-check-input:valid ~ .form-check-label {
+  color: #ffffff;
+  font-size: 1.6rem; }
+
+.alumni-form-area input[type=text], .alumni-form-area input[type=password], .alumni-form-area input[type=email], .alumni-form-area input[type=date], .alumni-form-area select {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  display: block;
+  width: 100%;
+  transition: all 0.3s;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.8); }
+  @media only screen and (max-width: 575px) {
+    .alumni-form-area input[type=text], .alumni-form-area input[type=password], .alumni-form-area input[type=email], .alumni-form-area input[type=date], .alumni-form-area select {
+      padding: 0.5rem 1rem; } }
+  .alumni-form-area input[type=text]::placeholder, .alumni-form-area input[type=password]::placeholder, .alumni-form-area input[type=email]::placeholder, .alumni-form-area input[type=date]::placeholder, .alumni-form-area select::placeholder {
+    color: rgba(255, 255, 255, 0.8); }
+  .alumni-form-area input[type=text]:focus, .alumni-form-area input[type=password]:focus, .alumni-form-area input[type=email]:focus, .alumni-form-area input[type=date]:focus, .alumni-form-area select:focus {
+    box-shadow: none !important; }
+
+.alumni-form-area select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("../images/down.png");
+  background-size: 10px;
+  background-repeat: no-repeat; }
+  .alumni-form-area select::-ms-expand {
+    display: none; }
+  .alumni-form-area select option {
+    padding: 10px;
+    color: #3F676F; }
+
+.alumni-form-area input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(2) sepia(2) brightness(2); }
+
+.alumni-form-area textarea {
+  position: static !important;
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 0;
+  font-size: 15px;
+  font-weight: 300;
+  color: #3F676F;
+  outline: none;
+  resize: none;
+  height: 120px;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 14px;
+  margin-top: 16px; }
+  .alumni-form-area textarea:hover, .alumni-form-area textarea:focus {
+    border: 0;
+    background-color: #ebeff8;
+    color: colorPrimary; }
+
+.alumni-form-area button {
+  background: transparent; }
+
 footer {
   background: #545775;
   padding: 7rem 0; }
@@ -502,6 +609,10 @@ footer {
     display: inline-block;
     margin-bottom: 20px;
     padding-bottom: 15px; }
+    @media only screen and (max-width: 768px) {
+      footer h4.widget-title {
+        margin-bottom: 10px;
+        margin-top: 3rem; } }
   footer + .copyright {
     background: #020202;
     padding: 10px; }
@@ -750,6 +861,109 @@ section.courses-coverd .accordion {
       .top-facilities .top-facilities-grid__items .facility:hover {
         background: #ffffff;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; }
+
+.alumni-certificate .alumni-box {
+  position: relative;
+  background: #3F676F;
+  text-align: center;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  transition: all 0.5s;
+  overflow: hidden; }
+  .alumni-certificate .alumni-box:hover {
+    transform: translateY(-5px); }
+  .alumni-certificate .alumni-box h4.heading-fourth {
+    margin-bottom: 20px; }
+  .alumni-certificate .alumni-box h4, .alumni-certificate .alumni-box a {
+    position: relative; }
+  .alumni-certificate .alumni-box a {
+    cursor: pointer; }
+  .alumni-certificate .alumni-box i {
+    color: #ffffff;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    font-size: 200px;
+    z-index: 0;
+    mix-blend-mode: overlay;
+    opacity: 0.2; }
+
+@media only screen and (max-width: 992px) {
+  .alumni-certificate .col-lg-4:last-child {
+    margin-top: 15px; } }
+
+@media screen and (max-width: 767.9px) {
+  .alumni-certificate .col-lg-4:first-child {
+    margin-bottom: 15px; } }
+
+.welcome-alumni .heading-fourth {
+  margin-bottom: 2rem; }
+
+.welcome-alumni .signature img {
+  width: 200px;
+  margin: 5rem 0 2rem 0; }
+
+.welcome-alumni form .work-detail {
+  margin-top: 3rem; }
+
+.alumni-glimpse .content-para {
+  text-align: center; }
+  @media screen and (min-width: 1200px) {
+    .alumni-glimpse .content-para {
+      padding: 0 130px; } }
+
+.alumni-glimpse .glimpse-card {
+  margin-top: 5rem;
+  position: relative; }
+  @media only screen and (max-width: 575px) {
+    .alumni-glimpse .glimpse-card {
+      margin-top: 3rem; } }
+  .alumni-glimpse .glimpse-card::after {
+    content: "";
+    background-image: linear-gradient(0deg, #3F676F, transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: 0.4s ease; }
+  .alumni-glimpse .glimpse-card:hover::after {
+    height: 100%; }
+  .alumni-glimpse .glimpse-card:hover .sliding-text {
+    clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%); }
+  .alumni-glimpse .glimpse-card:hover img {
+    transform: scale(1.3); }
+  .alumni-glimpse .glimpse-card .glimpse-img {
+    overflow: hidden; }
+    .alumni-glimpse .glimpse-card .glimpse-img img {
+      transition: 0.4s ease; }
+  .alumni-glimpse .glimpse-card .sliding-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3F676F;
+    width: 100%;
+    padding: 30px 0;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    z-index: 1;
+    transition: 0.4s ease;
+    border-radius: 360px 360px 0 0; }
+    .alumni-glimpse .glimpse-card .sliding-text h4 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 1rem; }
+    .alumni-glimpse .glimpse-card .sliding-text ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; }
+      .alumni-glimpse .glimpse-card .sliding-text ul li a {
+        color: #ffffff; }
 
 .faqs-vertical-tab .vertical-tabs {
   display: flex;
