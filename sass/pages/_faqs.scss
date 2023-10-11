@@ -1,49 +1,39 @@
 
 .faqs-vertical-tab{
-    .vertical-tabs {
-  display: flex;
-  flex-direction: column;
-  .tab{
-    width: 90%;
-    cursor: pointer;
-    margin-right: 10px;
-    @include respond (tab-port-before){
-        width: 100%;
+   .vertical-tabs{
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            }
+
+            .tab {
+            background-color: $colorSecondary;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            }
+
+            .tab.active {
+                color: $colorWhite;
+            background-color: $colorPrimary;
+            }
+
+            .tab-content .content {
+            display: none;
+            padding: 3rem;
+            border: 1px solid $colorSecondary;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            h6.heading-fac {
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+            }
+            .content-para:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+            }
+
+            .tab-content .active {
+            display: block;
+            }
     }
-    button.tablinks {
-    border: none;
-    cursor: pointer;
-    background: $colorTertiary;
-    width: 100%;
-    text-align: left;
-    padding: 12px 20px;
-    border-bottom: 1px solid $colorPrimary;
-    transition: $transition;
-    &.active{
-        background: $colorPrimary;
-        color: $colorWhite;
-    }
-    &:hover{
-        background: $colorPrimary;
-        color: $colorWhite;
-    }
-}
-&:last-child button.tablinks{
-    border-bottom: none;
-}
-  }
-  .tabcontent {
-  display: none;
-  @include respond (tab-port-before){
-        margin-top: 4rem;
-    }
-  .heading-fac{
-    margin-bottom: 2.4rem;
-    font-weight: 700;
-    &:not(:first-child){
-        margin-top: 5rem;
-    }
-  }
-}
-}
 }

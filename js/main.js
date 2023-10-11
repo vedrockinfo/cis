@@ -70,17 +70,37 @@ jQuery('.counter-count').each(function () {
 });
 
 
-function openTab(evt, tabName) {
-  $('.tabcontent').hide();
+// function openTab(evt, tabName) {
+//   $('.tabcontent').hide();
 
-  $('.tablinks').removeClass('active');
+//   $('.tablinks').removeClass('active');
 
-  $('#' + tabName).show();
+//   $('#' + tabName).show();
 
-  $(evt.target).addClass('active');
-}
+//   $(evt.target).addClass('active');
+// }
 
-openTab(event, 'tab1');
+// openTab(event, 'tab1');
+
+$(document).ready(function () {
+  $(".tab").click(function () {
+    // Remove active class from all tabs and contents
+    $(".tab").removeClass("active");
+    $(".content").removeClass("active");
+
+    // Add active class to the clicked tab
+    $(this).addClass("active");
+
+    // Show the corresponding content
+    var tabIndex = $(this).index();
+    $(".content").eq(tabIndex).addClass("active");
+  });
+
+  // Set the first tab and content as active initially
+  $(".tab:first").addClass("active");
+  $(".content:first").addClass("active");
+});
+
 
 
 $('.glimpse-carousel').owlCarousel({
@@ -100,3 +120,4 @@ $('.glimpse-carousel').owlCarousel({
     }
   }
 })
+
