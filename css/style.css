@@ -1911,3 +1911,29 @@ main.contact-page .contact-list {
     width: 100%;
     object-fit: cover;
     object-position: top; }
+
+.news-gallery .tz-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-auto-rows: 20rem; }
+  .news-gallery .tz-gallery__items {
+    position: relative; }
+    .news-gallery .tz-gallery__items img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+      cursor: pointer; }
+  .news-gallery .tz-gallery .news-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #3F676F;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s;
+    cursor: pointer; }
+    .news-gallery .tz-gallery .news-caption span {
+      font-size: 1.2rem;
+      text-transform: capitalize; }

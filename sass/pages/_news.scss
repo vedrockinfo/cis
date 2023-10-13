@@ -1,0 +1,32 @@
+.news-gallery{
+    .tz-gallery{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        grid-auto-rows: 20rem;
+        &__items{
+            position: relative;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                cursor: pointer;
+            }
+        }
+        .news-caption{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: $colorPrimary;
+            color: $colorWhite;
+            padding: 0.5rem 1rem;
+            transition: all 0.5s;
+            cursor: pointer;
+            span{
+                font-size: 1.2rem;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
