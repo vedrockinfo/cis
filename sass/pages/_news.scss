@@ -1,9 +1,20 @@
 .news-grid{
+    .row{
+        @media screen and (max-width:991.9px){
+            flex-direction: column-reverse;
+            gap: 4rem;
+        }
+    }
     .nav-link{
          text-align: left;
          color: $colorPrimary;
          padding: 15px 15px; 
-         border-bottom: 1px solid $colorPrimary;
+          @include respond (phone-before){
+                padding: 10px;
+            }
+         &:not(:last-child){
+            border-bottom: 1px solid $colorPrimary;
+         }
          text-transform: uppercase;
          font-size: 1.6rem;
          font-weight: 600;
@@ -28,7 +39,10 @@
 .sticky-tab {
     position: sticky;
     top: 3rem;
-    z-index: 999;
+    padding: 20px 20px;
+    background: $colorWhite;
+    z-index: 3;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
     .news-box{
         &:not(:last-child){
@@ -43,6 +57,9 @@
             position: relative;
             height: 260px;
             margin-right: -40px;
+            @media screen and (min-width:991.9px) {
+                height: 320px;
+            }
             @include respond (tab-port-after){
                 flex: 0 0 33.33%;
             max-width: 33.33%;
@@ -69,9 +86,28 @@
             padding: 27px 40px 26px;
             background: $colorWhite;
             z-index: 3;
-            transition: all .3s ease;
+            transition: $transition;
             position: relative;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            &::after{
+                content: "";
+                background: $colorPrimary;
+                height: 4px;
+                width: 0;
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                transition: $transition;
+            }
+            &:hover{
+                transform: translateY(-4px);
+                &::after{
+                    width: 100%;
+                }
+            }
+            @include respond (phone-before){
+                padding: 27px 20px 26px;
+            }
              @include respond (tab-port-after){
                 flex: 0 0 66.66%;
             max-width: 66.66%;
@@ -95,7 +131,8 @@
                     height: 75px;
                 }
                 @include respond (tab-port-before){
-                    height: 60px;
+                    height: auto;
+                    aspect-ratio: auto;
                 }
                 strong{
                     font-size: 3rem;
@@ -105,6 +142,14 @@
                         font-size: 1.6rem;
                         line-height: 0;
                     }
+                }
+            }
+            a{
+                background: transparent;
+                color: $colorPrimary;
+                &:hover{
+                    color: $colorWhite;
+                    background: $colorPrimary;
                 }
             }
         }

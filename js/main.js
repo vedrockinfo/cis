@@ -7,7 +7,14 @@ jQuery(window).scroll(function () {
 });
 
 
-jQuery('.owl-carousel').owlCarousel({
+jQuery(document).ready(function () {
+  jQuery(".glimpse-carousel").owlCarousel();
+  jQuery(".cambride-carousel").owlCarousel();
+  jQuery(".recognition-carousel").owlCarousel();
+});
+
+
+jQuery('.recognition-carousel').owlCarousel({
   loop: true,
   margin: 30,
   nav: false,
@@ -26,25 +33,42 @@ jQuery('.owl-carousel').owlCarousel({
   }
 })
 
-// Including Header Footer
+$('.glimpse-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: false,
+  dots: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 5
+    }
+  }
+})
 
-// function loadContent(file, elementId) {
-//   var xhr = new XMLHttpRequest();
-//   xhr.onreadystatechange = function () {
-//     if (xhr.readyState == 4 && xhr.status == 200) {
-//       document.getElementById(elementId).innerHTML = xhr.responseText;
-//     }
-//   };
-//   xhr.open("GET", file, true);
-//   xhr.send();
-// }
 
-// loadContent("include/header.html", "header");
-// loadContent("include/footer.html", "footer");
-
-// loadContent("../include/campus-header.html", "campus-header");
-// loadContent("../include/campus-footer.html", "campus-footer");
-
+$('.cambride-carousel').owlCarousel({
+  loop: true,
+  margin: 20,
+  nav: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
+    }
+  }
+})
 
 jQuery(function () {
   jQuery("#header").load("include/header.html");
@@ -85,23 +109,3 @@ $(document).ready(function () {
   $(".tab:first").addClass("active");
   $(".content:first").addClass("active");
 });
-
-
-
-$('.glimpse-carousel').owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: false,
-  dots: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 3
-    },
-    1000: {
-      items: 5
-    }
-  }
-})
