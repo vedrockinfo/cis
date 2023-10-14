@@ -18,6 +18,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Days+One&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@keyframes ripple {
+  0% {
+    transform: scale(1); }
+  75% {
+    transform: scale(1.75);
+    opacity: 1; }
+  100% {
+    transform: scale(2);
+    opacity: 0; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -2224,3 +2234,80 @@ main.contact-page .contact-list {
     .news-grid .news-box__content a:hover {
       color: #ffffff;
       background: #3F676F; }
+
+.propectus-video {
+  position: relative; }
+  .propectus-video .container .pros-content {
+    margin-right: 10rem; }
+  .propectus-video .container .signature img {
+    width: 200px;
+    margin: 5rem 0 2rem 0; }
+  .propectus-video h2 {
+    width: fit-content;
+    background: #3F676F;
+    color: #ffffff;
+    padding: 0.4rem 1.5rem; }
+    @media only screen and (min-width: 768.1px) {
+      .propectus-video h2 {
+        text-align: left; } }
+  .propectus-video .global-btn-two {
+    margin-top: 4rem; }
+  .propectus-video .propectu-img {
+    position: relative; }
+    .propectus-video .propectu-img .video-btn {
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: inline-block;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 90px;
+      height: 90px;
+      background-color: #3F676F;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 40px;
+      z-index: 1;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer; }
+      .propectus-video .propectu-img .video-btn::after, .propectus-video .propectu-img .video-btn::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        border-radius: 50%;
+        border: 1px solid #3F676F;
+        transition: .5s; }
+      .propectus-video .propectu-img .video-btn::before {
+        animation: ripple 2s linear infinite; }
+      .propectus-video .propectu-img .video-btn::after {
+        animation: ripple 2s linear 1s infinite; }
+    .propectus-video .propectu-img i {
+      padding-left: 8px;
+      position: absolute;
+      left: 50%;
+      right: 0;
+      top: 50%;
+      z-index: 1;
+      transform: translate(-40%, -50%);
+      margin-left: auto;
+      margin-right: auto; }
+    @media only screen and (min-width: 768.1px) {
+      .propectus-video .propectu-img {
+        min-height: 50rem;
+        top: -15rem;
+        position: absolute;
+        right: 0;
+        width: 25%;
+        height: 645px; }
+        .propectus-video .propectu-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center; } }

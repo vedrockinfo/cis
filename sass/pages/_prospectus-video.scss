@@ -1,0 +1,92 @@
+.propectus-video{
+    position: relative;
+    .container{
+        .pros-content{
+           margin-right: 10rem;
+        }
+         .signature{
+        img{
+            width: 200px;
+            margin: 5rem 0 2rem 0;
+        }
+    }
+    }
+    h2{
+        @include respond (tab-port-after){
+            text-align: left;
+        }
+        width: fit-content;
+        background: $colorPrimary;
+        color: $colorWhite;
+        padding: 0.4rem 1.5rem;
+    }
+    .global-btn-two{
+        margin-top: 4rem;
+    }
+    .propectu-img{
+        position: relative;
+        .video-btn{
+            box-shadow: 0 20px 30px rgba(0,0,0,.2);
+            position: absolute;
+            left: 0;
+            right: 0;
+            display: inline-block;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 90px;
+            height: 90px;
+            background-color: $colorPrimary;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 40px;
+            z-index: 1;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+            &::after, &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: -1;
+                bottom: 0;
+                left: 0;
+                border-radius: 50%;
+                border: 1px solid $colorPrimary;
+                transition: .5s;
+            }
+            &::before {
+                animation: ripple 2s linear infinite;
+            }
+            &::after {
+                animation: ripple 2s linear 1s infinite;
+            }
+        }
+        i{
+                padding-left: 8px;
+                position: absolute;
+                left: 50%;
+                right: 0;
+                top: 50%;
+                z-index: 1;
+                transform: translate(-40%, -50%);
+                margin-left: auto;
+                margin-right: auto;                                       
+            }
+        @include respond (tab-port-after){
+            min-height: 50rem;
+            top: -15rem;
+            position: absolute;
+            right: 0;
+            width: 25%;
+            height: 645px;
+            img{
+                width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            }
+        }
+    }
+}
