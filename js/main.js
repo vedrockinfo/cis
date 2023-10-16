@@ -70,6 +70,23 @@ $('.cambride-carousel').owlCarousel({
   }
 })
 
+$('.testimonial-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  }
+})
+
 jQuery(function () {
   jQuery("#header").load("include/header.html");
   jQuery("#footer").load("include/footer.html");
