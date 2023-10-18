@@ -314,6 +314,12 @@
     background: $colorPrimary;
     padding: 10rem 0;
     position: relative;
+    @include respond(tab-land-before){
+      padding: 6rem 0;
+    }
+    @include respond(tab-port-before){
+      padding: 3rem 0;
+    }
     &::before{
         content: "";
         background-image: url(../images/Background.jpg);
@@ -346,10 +352,29 @@
     }
     .prospectus-grid{
         display: grid;
+        @include respond (small-desktop-before){
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include respond (tab-land-before){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include respond (phone-before){
+            grid-template-columns: repeat(1, 1fr);
+        }
         grid-template-columns: repeat(5, 1fr);
         gap: 30px;
         &__items{
-            
+            &:last-child{
+                @include respond (small-desktop-before){
+           grid-column: span 4;
+        }
+         @include respond (small-desktop-before){
+            grid-column: span 2;
+        }
+        @include respond (phone-before){
+            grid-column: span 1;
+        }
+            }
         }
         &__content{
                 text-align: center;
@@ -362,10 +387,9 @@
                     border: 3px solid $colorPrimary;
                     outline: 2px solid $colorWhite;
                     background: $colorWhite;
-                    border-radius: 50%;
                     display: grid;
                     place-content: center;
-    aspect-ratio: 1 / 1;
+                    padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     img{
         width: 150px;

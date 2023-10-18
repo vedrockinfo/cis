@@ -2266,6 +2266,12 @@ main.contact-page .contact-list {
   background: #3F676F;
   padding: 10rem 0;
   position: relative; }
+  @media only screen and (max-width: 992px) {
+    .prospectus {
+      padding: 6rem 0; } }
+  @media only screen and (max-width: 768px) {
+    .prospectus {
+      padding: 3rem 0; } }
   .prospectus::before {
     content: "";
     background-image: url(../images/Background.jpg);
@@ -2297,6 +2303,24 @@ main.contact-page .contact-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px; }
+    @media only screen and (max-width: 1200px) {
+      .prospectus .prospectus-grid {
+        grid-template-columns: repeat(4, 1fr); } }
+    @media only screen and (max-width: 992px) {
+      .prospectus .prospectus-grid {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media only screen and (max-width: 575px) {
+      .prospectus .prospectus-grid {
+        grid-template-columns: repeat(1, 1fr); } }
+    @media only screen and (max-width: 1200px) {
+      .prospectus .prospectus-grid__items:last-child {
+        grid-column: span 4; } }
+    @media only screen and (max-width: 1200px) {
+      .prospectus .prospectus-grid__items:last-child {
+        grid-column: span 2; } }
+    @media only screen and (max-width: 575px) {
+      .prospectus .prospectus-grid__items:last-child {
+        grid-column: span 1; } }
     .prospectus .prospectus-grid__content {
       text-align: center; }
       .prospectus .prospectus-grid__content h6 {
@@ -2307,10 +2331,9 @@ main.contact-page .contact-list {
         border: 3px solid #3F676F;
         outline: 2px solid #ffffff;
         background: #ffffff;
-        border-radius: 50%;
         display: grid;
         place-content: center;
-        aspect-ratio: 1 / 1;
+        padding: 2rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
         .prospectus .prospectus-grid__content a img {
           width: 150px; }
