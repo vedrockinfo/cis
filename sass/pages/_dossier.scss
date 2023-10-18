@@ -14,6 +14,17 @@
         color: $colorPrimary;
     }
     }
+    h4.heading-fourth {
+    margin-bottom: 1.5rem;
+}
+.content-attend{
+     &:not(:last-child){
+    margin-bottom: 2rem;
+ @include respond (small-desktop-after){            
+                margin-bottom: 4rem;
+            }
+        }
+    }
     .dossier-logo{            
         @include respond (tab-port-after){
                 max-width: 600px;
