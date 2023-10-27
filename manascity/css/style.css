@@ -27,12 +27,27 @@ html {
 
 body {
   background-color: #0a6eb226; }
+  body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    background-color: #103741; }
+  body::-webkit-scrollbar {
+    width: 6px;
+    background-color: #103741; }
+  body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #FE5D37; }
 
 a {
   text-decoration: none; }
 
 ul {
   list-style: none; }
+
+::selection {
+  background-color: #FE5D37;
+  color: #ffffff; }
 
 body {
   font-family: 'Work Sans', sans-serif;
@@ -827,25 +842,172 @@ footer {
   outline: 3px solid #FE5D37;
   border: 3px solid #ffffff; }
 
+@media screen and (min-width: 767.9px) {
+  .founder-concept .col-md-3 {
+    text-align: end; } }
+
 .founder-concept .found-book-cover {
-  width: 100%;
   position: relative;
-  display: inline-block;
-  text-align: right; }
+  display: inline-block; }
   .founder-concept .found-book-cover::before {
     content: "";
     background: transparent;
     border: 5px solid #FE5D37;
     position: absolute;
-    top: -2rem;
+    top: 2rem;
     left: -2rem;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: -1; }
+
+.career-one .container {
+  position: relative; }
+
+.career-one .careerimg {
+  position: static; }
+
+.career-one .career-card-content {
+  background: #FE5D37;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+  @media screen and (max-width: 992px) {
+    .career-one .career-card-content {
+      padding: 2rem 4rem; } }
+  @media only screen and (min-width: 992.1px) {
+    .career-one .career-card-content {
+      position: absolute;
+      bottom: -15rem;
+      right: 7.5px; } }
+  @media screen and (min-width: 992.2px) {
+    .career-one .career-card-content {
+      width: calc(100% - 45rem); } }
+  @media screen and (min-width: 1400px) {
+    .career-one .career-card-content {
+      padding: 7rem 6rem; } }
+  @media screen and (min-width: 1200px) and (max-width: 1399.9px) {
+    .career-one .career-card-content {
+      padding: 4rem 3rem; } }
+  @media screen and (min-width: 992.1px) and (max-width: 1199.9px) {
+    .career-one .career-card-content {
+      width: calc(100% - 20rem);
+      padding: 2rem 5rem; } }
+  @media only screen and (min-width: 992.1px) {
+    .career-one .career-card-content h2 {
+      text-align: left; } }
+
+@media only screen and (min-width: 992.1px) {
+  .career-two {
+    padding-top: 15rem; } }
+
+.career-two .heading-fourth {
+  margin-bottom: 4rem; }
+
+.career-two .career-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #103741;
+  border-radius: 0; }
+  .career-two .career-grid__items {
+    position: relative; }
+    .career-two .career-grid__items::before {
+      content: "";
+      background: #FE5D37;
+      height: 3px;
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: 0.4s ease; }
+    .career-two .career-grid__items:hover::before {
+      width: 100%; }
+    .career-two .career-grid__items:nth-child(1), .career-two .career-grid__items:nth-child(2), .career-two .career-grid__items:nth-child(3) {
+      border-bottom: 1px solid #103741; }
+    @media only screen and (min-width: 992.1px) {
+      .career-two .career-grid__items:nth-child(2), .career-two .career-grid__items:nth-child(5) {
+        border-left: 1px solid #103741;
+        border-right: 1px solid #103741; } }
+  .career-two .career-grid__card {
+    padding: 5rem 3.5rem; }
+    .career-two .career-grid__card .card-icons {
+      text-align: center; }
+      .career-two .career-grid__card .card-icons img {
+        mix-blend-mode: multiply;
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
+        object-position: top; }
+    .career-two .career-grid__card .card-content {
+      text-align: center;
+      margin-top: 3rem; }
+
+.career-three {
+  padding: 7rem 0;
+  display: block; }
+  @media screen and (min-width: 991.99px) {
+    .career-three {
+      background-image: linear-gradient(90deg, #FE5D37 54%, transparent 47%); }
+      .career-three .care-img img {
+        height: 55rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: top; } }
+  @media screen and (max-width: 991.9px) {
+    .career-three {
+      padding: 5rem 0;
+      background-image: linear-gradient(180deg, #FE5D37 54%, #FE5D37 47%); }
+      .career-three .care-img img {
+        margin-top: 5rem; } }
+  @media only screen and (max-width: 768px) {
+    .career-three {
+      padding: 3rem 0; } }
+  .career-three .signature {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    color: #ffffff; }
+    .career-three .signature img {
+      width: 20rem;
+      margin-bottom: 1rem;
+      filter: brightness(0) sepia(0) invert(1); }
+  .career-three h2 {
+    color: #ffffff; }
+    @media only screen and (min-width: 992.1px) {
+      .career-three h2 {
+        text-align: left; } }
+  .career-three p {
+    color: #ffffff; }
+
+.apply-career .content-para a {
+  margin-top: 3rem; }
+
+@media screen and (min-width: 1200px) {
+  .apply-career .content-para {
+    padding: 0 20rem; } }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem; }
+  gap: 1rem;
+  grid-auto-rows: 25rem; }
+  .gallery-grid .gallery-grid-items {
+    overflow: hidden; }
+    .gallery-grid .gallery-grid-items .bg-image {
+      height: 100%; }
+    .gallery-grid .gallery-grid-items img {
+      width: 100%;
+      height: 100% !important;
+      object-fit: cover;
+      object-position: top; }
+    .gallery-grid .gallery-grid-items:nth-child(5n+2) {
+      grid-column-start: 2;
+      grid-column-end: 4; }
+    .gallery-grid .gallery-grid-items:nth-child(5n+3) {
+      grid-column-start: 4;
+      grid-column-end: 5; }
+    .gallery-grid .gallery-grid-items:nth-child(5n+4) {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+    .gallery-grid .gallery-grid-items:nth-child(5n+5) {
+      grid-column-start: 3;
+      grid-column-end: 5; }
   .gallery-grid .mask {
     background-color: rgba(251, 251, 251, 0.2); }
 
