@@ -48,6 +48,27 @@
         grid-template-columns: repeat(3, 1fr);
         border: 1px solid $footerBG;
         border-radius: 0;
+        @include respond (tab-land-before){
+            grid-template-columns: repeat(2, 1fr);
+            &__items{
+                &:nth-child(4){
+                    border-bottom: 1px solid $footerBG;
+                }
+                @media screen and (max-width:992.1px) and (min-width:768.5px) {
+            &:nth-child(1), &:nth-child(5), &:nth-child(3){
+                border-right: 1px solid $footerBG;
+            }
+        }
+            }
+        }
+        @include respond (tab-port-before){
+            grid-template-columns: repeat(1, 1fr);
+            &__items{
+                &:nth-child(5){
+                    border-bottom: 1px solid $footerBG;
+                }
+            }
+        }
         &__items{
             position: relative;
             &::before{
@@ -144,5 +165,10 @@
         @media screen and (min-width:1200px) {
             padding: 0 20rem;
         }
+    }
+}
+.career-footer{
+    footer{
+        margin-top: 0;
     }
 }
