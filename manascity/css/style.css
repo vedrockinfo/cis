@@ -32,7 +32,7 @@ body {
     border-radius: 20px;
     background-color: #103741; }
   body::-webkit-scrollbar {
-    width: 6px;
+    width: 3px;
     background-color: #103741; }
   body::-webkit-scrollbar-thumb {
     border-radius: 10px;
@@ -100,6 +100,24 @@ h2.primary-heading {
       font-size: 36px; } }
   @media only screen and (max-width: 575px) {
     .hero-primary-heading {
+      font-size: 30px; } }
+
+.hero-primary-heading-two {
+  text-transform: uppercase;
+  font-size: 49px;
+  font-weight: 700;
+  color: #FE5D37;
+  text-align: left;
+  line-height: 1.26; }
+  @media only screen and (max-width: 992px) {
+    .hero-primary-heading-two {
+      font-size: 48px; } }
+  @media only screen and (max-width: 768px) {
+    .hero-primary-heading-two {
+      font-size: 36px;
+      text-align: center; } }
+  @media only screen and (max-width: 575px) {
+    .hero-primary-heading-two {
       font-size: 30px; } }
 
 .hero-secondary-heading {
@@ -228,6 +246,11 @@ h2.primary-heading {
     height: 100%; }
   .inner-hero-section .container {
     position: relative; }
+
+.inner-hero-section-two {
+  position: relative;
+  padding: 5rem 0;
+  background: #0a6eb226; }
 
 .global-btn-one {
   font-size: 15px;
@@ -361,7 +384,7 @@ h2.primary-heading {
     margin-top: 3rem; } }
 
 .contact-form-area .form-items {
-  border: 1px solid #FE5D37;
+  border: 1px solid #333333;
   border-radius: 10px;
   padding: 25px;
   display: inline-block;
@@ -405,19 +428,22 @@ h2.primary-heading {
   border-radius: 2px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #FE5D37;
+  border-bottom: 1px solid #333333;
   display: block;
   width: 100%;
   transition: all 0.3s;
   margin-top: 16px;
-  color: rgba(254, 93, 55, 0.8); }
+  color: #333333; }
   @media only screen and (max-width: 575px) {
     .contact-form-area input[type=text], .contact-form-area input[type=password], .contact-form-area input[type=email], .contact-form-area input[type=date], .contact-form-area select {
       padding: 0.5rem 1rem; } }
   .contact-form-area input[type=text]::placeholder, .contact-form-area input[type=password]::placeholder, .contact-form-area input[type=email]::placeholder, .contact-form-area input[type=date]::placeholder, .contact-form-area select::placeholder {
-    color: rgba(254, 93, 55, 0.8); }
+    color: #333333; }
   .contact-form-area input[type=text]:focus, .contact-form-area input[type=password]:focus, .contact-form-area input[type=email]:focus, .contact-form-area input[type=date]:focus, .contact-form-area select:focus {
-    box-shadow: none !important; }
+    box-shadow: none !important;
+    border-bottom: 1px solid #FE5D37; }
+    .contact-form-area input[type=text]:focus::placeholder, .contact-form-area input[type=password]:focus::placeholder, .contact-form-area input[type=email]:focus::placeholder, .contact-form-area input[type=date]:focus::placeholder, .contact-form-area select:focus::placeholder {
+      color: #FE5D37; }
 
 .contact-form-area textarea {
   position: static !important;
@@ -427,10 +453,10 @@ h2.primary-heading {
   text-align: left;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #FE5D37;
+  border-bottom: 1px solid #333333;
   font-size: 15px;
   font-weight: 300;
-  color: rgba(254, 93, 55, 0.8);
+  color: #333333;
   outline: none;
   resize: none;
   height: 120px;
@@ -438,9 +464,200 @@ h2.primary-heading {
   transition: none;
   margin-bottom: 14px;
   margin-top: 16px; }
+  .contact-form-area textarea:focus {
+    border-bottom: 1px solid #FE5D37; }
+    .contact-form-area textarea:focus::placeholder {
+      color: #FE5D37; }
   .contact-form-area textarea:hover, .contact-form-area textarea:focus {
     background-color: transparent;
-    color: #FE5D37; }
+    color: #333333; }
+
+@media only screen and (max-width: 768px) {
+  .online-fees {
+    margin-top: 3rem; } }
+
+.online-fees .form-items {
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 25px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  text-align: left;
+  transition: all 0.4s ease; }
+  @media only screen and (max-width: 575px) {
+    .online-fees .form-items {
+      min-width: 80%; } }
+
+.online-fees h3 {
+  color: #FE5D37;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px; }
+  @media only screen and (max-width: 575px) {
+    .online-fees h3 {
+      font-size: 18px; } }
+
+.online-fees h3.form-title {
+  margin-bottom: 30px; }
+
+.online-fees p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 30px; }
+
+.online-fees label, .online-fees .was-validated .form-check-input:invalid ~ .form-check-label, .online-fees .was-validated .form-check-input:valid ~ .form-check-label {
+  color: #ffffff;
+  font-size: 1.6rem; }
+
+.online-fees input[type=text], .online-fees input[type=password], .online-fees input[type=email], .online-fees input[type=date], .online-fees select {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #333333;
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  color: #333333; }
+  @media only screen and (max-width: 575px) {
+    .online-fees input[type=text], .online-fees input[type=password], .online-fees input[type=email], .online-fees input[type=date], .online-fees select {
+      padding: 0.5rem 1rem; } }
+  .online-fees input[type=text]::placeholder, .online-fees input[type=password]::placeholder, .online-fees input[type=email]::placeholder, .online-fees input[type=date]::placeholder, .online-fees select::placeholder {
+    color: #333333; }
+  .online-fees input[type=text]:focus, .online-fees input[type=password]:focus, .online-fees input[type=email]:focus, .online-fees input[type=date]:focus, .online-fees select:focus {
+    box-shadow: none !important;
+    border-bottom: 1px solid #FE5D37; }
+    .online-fees input[type=text]:focus::placeholder, .online-fees input[type=password]:focus::placeholder, .online-fees input[type=email]:focus::placeholder, .online-fees input[type=date]:focus::placeholder, .online-fees select:focus::placeholder {
+      color: #FE5D37; }
+
+.online-fees textarea {
+  position: static !important;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333333;
+  font-size: 15px;
+  font-weight: normal;
+  color: #333333;
+  outline: none;
+  resize: none;
+  height: 120px;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 14px;
+  margin-top: 16px; }
+  .online-fees textarea:focus {
+    border-bottom: 1px solid #FE5D37; }
+    .online-fees textarea:focus::placeholder {
+      color: #FE5D37; }
+  .online-fees textarea:hover, .online-fees textarea:focus {
+    background-color: transparent;
+    color: #333333; }
+
+@media only screen and (max-width: 768px) {
+  .registration-form {
+    margin-top: 3rem; } }
+
+.registration-form .form-items {
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+  transition: all 0.4s ease; }
+  @media only screen and (min-width: 992.1px) {
+    .registration-form .form-items {
+      display: block;
+      width: calc(100% - 3rem);
+      margin: auto; } }
+  @media only screen and (max-width: 992px) {
+    .registration-form .form-items {
+      min-width: 80%; } }
+
+.registration-form h3 {
+  color: #FE5D37;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px; }
+  @media only screen and (max-width: 575px) {
+    .registration-form h3 {
+      font-size: 18px; } }
+
+.registration-form h3.form-title {
+  margin-bottom: 30px; }
+
+.registration-form p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 30px; }
+
+.registration-form label, .registration-form .was-validated .form-check-input:invalid ~ .form-check-label, .registration-form .was-validated .form-check-input:valid ~ .form-check-label {
+  color: #ffffff;
+  font-size: 1.6rem; }
+
+.registration-form input[type=text], .registration-form input[type=password], .registration-form input[type=email], .registration-form input[type=date], .registration-form select {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1rem;
+  border-radius: 2px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #333333;
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  color: #333333; }
+  @media only screen and (max-width: 575px) {
+    .registration-form input[type=text], .registration-form input[type=password], .registration-form input[type=email], .registration-form input[type=date], .registration-form select {
+      padding: 0.5rem 1rem; } }
+  .registration-form input[type=text]::placeholder, .registration-form input[type=password]::placeholder, .registration-form input[type=email]::placeholder, .registration-form input[type=date]::placeholder, .registration-form select::placeholder {
+    color: #333333; }
+  .registration-form input[type=text]:focus, .registration-form input[type=password]:focus, .registration-form input[type=email]:focus, .registration-form input[type=date]:focus, .registration-form select:focus {
+    box-shadow: none !important;
+    border-bottom: 1px solid #FE5D37; }
+    .registration-form input[type=text]:focus::placeholder, .registration-form input[type=password]:focus::placeholder, .registration-form input[type=email]:focus::placeholder, .registration-form input[type=date]:focus::placeholder, .registration-form select:focus::placeholder {
+      color: #FE5D37; }
+
+.registration-form textarea {
+  position: static !important;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333333;
+  font-size: 15px;
+  font-weight: normal;
+  color: #333333;
+  outline: none;
+  resize: none;
+  height: 120px;
+  -webkit-transition: none;
+  transition: none;
+  margin-bottom: 14px;
+  margin-top: 16px; }
+  .registration-form textarea:focus {
+    border-bottom: 1px solid #FE5D37; }
+    .registration-form textarea:focus::placeholder {
+      color: #FE5D37; }
+  .registration-form textarea:hover, .registration-form textarea:focus {
+    background-color: transparent;
+    color: #333333; }
 
 footer {
   background: #103741;
@@ -571,7 +788,8 @@ footer {
     transform: rotate(-90deg) translate(-50%, 118%);
     padding: 10px 20px;
     border-radius: 40px;
-    z-index: 1; }
+    z-index: 1;
+    font-size: 1.6rem; }
 
 .middle-header {
   padding: 1rem 0;
@@ -964,6 +1182,51 @@ footer {
     height: 100%;
     z-index: -1; }
 
+.mahotsav-section .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  grid-auto-rows: 25rem; }
+  @media only screen and (max-width: 992px) {
+    .mahotsav-section .gallery-grid {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 768px) {
+    .mahotsav-section .gallery-grid {
+      grid-template-columns: repeat(1, 1fr); } }
+  .mahotsav-section .gallery-grid .gallery-grid-items {
+    overflow: hidden; }
+    .mahotsav-section .gallery-grid .gallery-grid-items .bg-image {
+      height: 100%; }
+    .mahotsav-section .gallery-grid .gallery-grid-items img {
+      width: 100%;
+      height: 100% !important;
+      object-fit: cover;
+      object-position: top; }
+  .mahotsav-section .gallery-grid .mask {
+    background-color: rgba(251, 251, 251, 0.2); }
+
+.mahotsav-section .closed {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(100%, 0);
+  cursor: pointer; }
+  .mahotsav-section .closed img {
+    width: 5rem;
+    filter: brightness(0) sepia(2) invert(1); }
+
+.mahotsav-section .azadi-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 15px;
+  background: #FE5D37; }
+  .mahotsav-section .azadi-overlay h4 {
+    margin: 0;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 600; }
+
 .career-one .container {
   position: relative; }
 
@@ -1147,34 +1410,49 @@ main.contact-page .contact-list {
         width: 60px;
         margin: auto; }
 
-.gallery-grid {
+.gallery-section .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   grid-auto-rows: 25rem; }
-  .gallery-grid .gallery-grid-items {
+  @media only screen and (max-width: 768px) {
+    .gallery-section .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 16rem; } }
+  .gallery-section .gallery-grid .gallery-grid-items {
     overflow: hidden; }
-    .gallery-grid .gallery-grid-items .bg-image {
+    .gallery-section .gallery-grid .gallery-grid-items .bg-image {
       height: 100%; }
-    .gallery-grid .gallery-grid-items img {
+    .gallery-section .gallery-grid .gallery-grid-items img {
       width: 100%;
       height: 100% !important;
       object-fit: cover;
       object-position: top; }
-    .gallery-grid .gallery-grid-items:nth-child(5n+2) {
-      grid-column-start: 2;
-      grid-column-end: 4; }
-    .gallery-grid .gallery-grid-items:nth-child(5n+3) {
-      grid-column-start: 4;
-      grid-column-end: 5; }
-    .gallery-grid .gallery-grid-items:nth-child(5n+4) {
-      grid-column-start: 1;
-      grid-column-end: 3; }
-    .gallery-grid .gallery-grid-items:nth-child(5n+5) {
-      grid-column-start: 3;
-      grid-column-end: 5; }
-  .gallery-grid .mask {
+    @media only screen and (min-width: 768.1px) {
+      .gallery-section .gallery-grid .gallery-grid-items:nth-child(5n+2) {
+        grid-column-start: 2;
+        grid-column-end: 4; }
+      .gallery-section .gallery-grid .gallery-grid-items:nth-child(5n+3) {
+        grid-column-start: 4;
+        grid-column-end: 5; }
+      .gallery-section .gallery-grid .gallery-grid-items:nth-child(5n+4) {
+        grid-column-start: 1;
+        grid-column-end: 3; }
+      .gallery-section .gallery-grid .gallery-grid-items:nth-child(5n+5) {
+        grid-column-start: 3;
+        grid-column-end: 5; } }
+  .gallery-section .gallery-grid .mask {
     background-color: rgba(251, 251, 251, 0.2); }
+
+.gallery-section .closed {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(100%, 0);
+  cursor: pointer; }
+  .gallery-section .closed img {
+    width: 5rem;
+    filter: brightness(0) sepia(2) invert(1); }
 
 .hero-section {
   background-image: url("../images/new2.jpg");
@@ -1417,6 +1695,160 @@ main.contact-page .contact-list {
     .news-grid .news-box__content a:hover {
       color: #ffffff;
       background: #FE5D37; }
+
+.online-key-features {
+  background: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 15px 15px 15px 0px;
+  position: sticky;
+  top: 2rem; }
+  .online-key-features ul li {
+    font-size: initial; }
+    .online-key-features ul li:not(:last-child) {
+      padding-bottom: 0.7rem; }
+
+.notes {
+  padding: 1rem 2.5rem 2rem;
+  border: 1px solid #333333; }
+  .notes h5 {
+    text-decoration: underline;
+    text-underline-position: below; }
+  .notes p {
+    font-size: 1.4rem;
+    line-height: 1.3; }
+
+.registration {
+  padding: 7rem 0;
+  position: relative;
+  background-image: url(https://blog.clickmeeting.com/uploads//2016/11/2016.11.01-Using-The-Webinar-Registration-Form-To-Gain-Marketing-Intelligence.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 992px) {
+    .registration {
+      padding: 5rem 0; } }
+  @media only screen and (max-width: 768px) {
+    .registration {
+      padding: 3rem 0; } }
+  .registration::before {
+    content: "";
+    background: #FE5D37;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.7;
+    height: 100%; }
+  .registration .container {
+    position: relative; }
+    .registration .container .registration-grid {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+      @media only screen and (min-width: 768.1px) {
+        .registration .container .registration-grid {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          align-items: center; }
+          .registration .container .registration-grid .left-side {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            height: 100%;
+            width: 100%;
+            background: #fe5d37;
+            padding: 5rem;
+            display: flex;
+            align-items: center;
+            border-radius: 2rem 0rem 0rem 2rem;
+            position: relative; }
+            .registration .container .registration-grid .left-side::before {
+              content: "";
+              background-image: url("../images/career-01.png");
+              background-position: bottom;
+              background-size: contain;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 100%;
+              height: 100%;
+              z-index: 0;
+              mix-blend-mode: soft-light;
+              opacity: 0.7; }
+            .registration .container .registration-grid .left-side .cis-info {
+              position: relative; }
+          .registration .container .registration-grid .right-side {
+            grid-column-start: 3;
+            grid-column-end: 7;
+            background: #ffffff;
+            padding: 5rem;
+            border-radius: 0 2rem 2rem 0; } }
+  .registration .registrer-social {
+    text-align: center;
+    margin-top: 3rem; }
+    .registration .registrer-social strong {
+      font-size: 2.4rem;
+      font-weight: 300;
+      position: relative;
+      background: #ffffff;
+      z-index: 0;
+      padding: 6px; }
+      .registration .registrer-social strong::before, .registration .registrer-social strong::after {
+        content: "";
+        background: #333333;
+        width: 12rem;
+        top: 57%;
+        height: 1px;
+        transform: translateY(-50%);
+        position: absolute;
+        z-index: -1; }
+      .registration .registrer-social strong::before {
+        left: 0; }
+      .registration .registrer-social strong::after {
+        right: 0; }
+    .registration .registrer-social ul {
+      margin: 2rem 0 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap; }
+      .registration .registrer-social ul li:nth-child(1) i {
+        color: #e96651; }
+      .registration .registrer-social ul li:nth-child(2) i {
+        color: #7acdee; }
+      .registration .registrer-social ul li:nth-child(3) i {
+        color: #557dbc; }
+      .registration .registrer-social ul li:nth-child(4) i {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        -webkit-background-clip: text;
+        color: transparent; }
+      .registration .registrer-social ul li a {
+        display: block; }
+        .registration .registrer-social ul li a i {
+          font-size: 3rem; }
+  .registration .cis-info .logo {
+    background: #fff;
+    padding: 10px 30px;
+    border-radius: 0 140px 0px 0px; }
+  .registration .cis-info-content {
+    margin-top: 4rem;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 1rem; }
+    .registration .cis-info-content h6 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 25px; }
+    .registration .cis-info-content li {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 25px;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif !important; }
+      .registration .cis-info-content li::before {
+        filter: brightness(0) sepia(1) invert(2); }
+
+.register-footer footer {
+  margin-top: 0; }
 
 .admission h5 {
   display: inline-block;

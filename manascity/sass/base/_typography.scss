@@ -56,6 +56,24 @@ body {
       font-size: 30px;
     }
 }
+.hero-primary-heading-two {
+    text-transform: uppercase;
+    font-size: 49px;
+    font-weight: 700;
+    color: $colorPrimary;
+    text-align: left;
+    line-height: 1.26;
+    @include respond(tab-land-before){
+      font-size: 48px;
+    }
+    @include respond(tab-port-before){
+      font-size: 36px;
+      text-align: center;
+    }
+    @include respond(phone-before){
+      font-size: 30px;
+    }
+}
 .hero-secondary-heading {
     text-transform: uppercase;
     font-size: 48px;
