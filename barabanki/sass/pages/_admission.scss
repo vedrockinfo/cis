@@ -1,0 +1,39 @@
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+    &__box{
+        position: relative;
+        padding: 40px 0;
+        width: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .circle{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background:conic-gradient(from 0deg,var(--clr) 0%, var(--clr) 0% var(--i), #333 var(--i), #333 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                content: "";
+                position: absolute;
+                inset: 10px;
+                background: #fff;
+                border-radius: 50%;
+            }
+            h2 {
+                    position: relative;
+                    font-size: 36px;
+                    font-weight: 800;
+                    color: var(--clr);
+                }
+        }
+    }
+}
