@@ -1,39 +1,47 @@
-.skills-grid{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 30px;
-    justify-content: center;
-    position: relative;
-    &__box{
-        position: relative;
-        padding: 40px 0;
-        width: 240px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .circle{
-            position: relative;
-            width: 150px;
-            height: 150px;
-            background:conic-gradient(from 0deg,var(--clr) 0%, var(--clr) 0% var(--i), #333 var(--i), #333 100%);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &::before{
-                content: "";
-                position: absolute;
-                inset: 10px;
-                background: #fff;
-                border-radius: 50%;
-            }
-            h2 {
-                    position: relative;
-                    font-size: 36px;
-                    font-weight: 800;
-                    color: var(--clr);
-                }
+.admission{
+    .row{
+        @media screen and (max-width:992px) {
+            flex-direction: column-reverse;
         }
     }
+    hr{
+        margin: 2.5rem 0 4.5rem;
+        @include respond(tab-land-before){
+      margin: 2rem 0 3rem;
+    }
+    @include respond(tab-port-before){
+      margin: 1rem 0 2rem;
+    }
+    }
+    ul.primary-list{
+         li:not(:last-child){
+            margin-bottom: 20px;
+         }
+        &.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 50px;
+    margin-top: 20px;
+    strong{
+        color: $colorPrimary;
+    }
+}
+    }
+    .heading-fourth{
+        color: $colorHeading;
+        margin-bottom: 20px;
+    }
+}
+.director-message{
+    .director-pic{
+        @media screen and (max-width:992px) {
+            margin-bottom: 3rem;
+        }
+    }
+    .content-para {
+    @media screen and (min-width:992px) {
+        padding-left: 2rem;
+    }
+}
 }

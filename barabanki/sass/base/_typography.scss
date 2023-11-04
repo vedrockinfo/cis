@@ -74,6 +74,24 @@ body {
     }
 }
 
+.admission-heading {
+    text-transform: capitalize;
+    font-size: 48px;
+    font-weight: 700;
+    color: $colorHeading;
+    line-height: 1.26;
+    margin-bottom: 2rem;
+    @include respond(tab-land-before){
+      font-size: 36px;
+    }
+    @include respond(tab-port-before){
+      font-size: 30px;
+    }
+    @include respond(phone-before){
+      font-size: 24px;
+    }
+}
+
 .heading-fourth {
     line-height: 1.25em;
     margin-bottom: 0;
